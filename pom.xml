@@ -8,6 +8,7 @@
         <module>demo-springboot</module>
         <module>demo-springboot-redis</module>
         <module>demo-springboot-validated</module>
+        <module>demo-springboot-sa-token</module>
     </modules>
 
     <parent>
