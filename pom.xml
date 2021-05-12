@@ -9,6 +9,7 @@
         <module>demo-springboot-redis</module>
         <module>demo-springboot-validated</module>
         <module>demo-springboot-sa-token</module>
+        <module>demo-springboot-elasticsearch</module>
     </modules>
 
     <parent>
