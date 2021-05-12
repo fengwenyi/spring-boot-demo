@@ -10,6 +10,27 @@
         <module>demo-springboot-validated</module>
         <module>demo-springboot-sa-token</module>
         <module>demo-springboot-elasticsearch</module>
+        <module>demo-springboot-kafka</module>
+        <module>demo-springboot-rabbitmq</module>
+        <module>demo-springboot-shiro</module>
+        <module>demo-springboot-security</module>
+        <module>demo-springboot-mybatis</module>
+        <module>demo-springboot-jpa</module>
+        <module>demo-springboot-redisson</module>
+        <module>demo-springboot-jdbc</module>
+        <module>demo-springboot-hibernate</module>
+        <module>demo-springboot-logback</module>
+        <module>demo-springboot-docker</module>
+        <module>demo-springboot-async</module>
+        <module>demo-springboot-aop</module>
+        <module>demo-springboot-swagger</module>
+        <module>demo-springboot-email</module>
+        <module>demo-springboot-oss</module>
+        <module>demo-springboot-websocket</module>
+        <module>demo-springboot-poi</module>
+        <module>demo-springboot-jenkins</module>
+        <module>demo-springboot-rocketmq</module>
+        <module>demo-springboot-mybatis-plus</module>
     </modules>
 
     <parent>
