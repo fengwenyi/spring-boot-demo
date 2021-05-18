@@ -31,6 +31,8 @@
         <module>demo-springboot-jenkins</module>
         <module>demo-springboot-rocketmq</module>
         <module>demo-springboot-mybatis-plus</module>
+        <module>demo-springboot-swagger-2</module>
+        <module>demo-springboot-swagger-3</module>
     </modules>
 
     <parent>

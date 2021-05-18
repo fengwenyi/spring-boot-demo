@@ -26,6 +26,8 @@
 - [ ] [demo-springboot-security](./demo-springboot-security): Spring Boot 集成 Spring Security 示例
 - [ ] [demo-springboot-shiro](./demo-springboot-shiro): Spring Boot 集成 Apache Shiro 示例
 - [ ] [demo-springboot-swagger](./demo-springboot-swagger): Spring Boot 集成 Swagger 示例
+- [ ] [demo-springboot-swagger-2](./demo-springboot-swagger): Spring Boot 集成 Swagger 2 示例
+- [x] [demo-springboot-swagger-3](./demo-springboot-swagger-3): Spring Boot 集成 Swagger 3.0 示例
 - [ ] [demo-springboot-websocket](./demo-springboot-websocket): Spring Boot 集成 WebSocket 示例
 - [ ] [demo-springboot-rocketmq](./demo-springboot-rocketmq): Spring Boot 集成 RocketMQ 示例
 
