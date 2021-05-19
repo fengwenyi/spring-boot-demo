@@ -1,24 +1,23 @@
 package com.fengwenyi.demospringbootswagger3.vo;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 /**
  * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
  * @since 2021-05-18
  */
-@ApiModel
+@Schema
 @Data
 public class UserAddResponseVo {
 
-    @ApiModelProperty("UID")
+    @Schema(description = "UID")
     private String uid;
 
-    @ApiModelProperty("姓名")
+    @Schema(description = "姓名")
     private String name;
 
-    @ApiModelProperty("年龄")
+    @Schema(description = "年龄")
     private Integer age;
 
 }

@@ -12,14 +12,21 @@
     <artifactId>demo-springboot-swagger-3</artifactId>
 
     <properties>
-        <swagger3.version>3.0.0</swagger3.version>
+        <springfox.version>3.0.0</springfox.version>
+        <springdoc.version>1.5.8</springdoc.version>
     </properties>
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
-            <version>${swagger3.version}</version>
+            <version>${springfox.version}</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc.version}</version>
         </dependency>
 
         <dependency>

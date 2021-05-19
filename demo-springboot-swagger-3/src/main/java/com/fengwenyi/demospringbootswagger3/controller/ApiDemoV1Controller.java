@@ -3,8 +3,8 @@ package com.fengwenyi.demospringbootswagger3.controller;
 import com.fengwenyi.api.result.ResultTemplate;
 import com.fengwenyi.demospringbootswagger3.vo.UserAddRequestVo;
 import com.fengwenyi.demospringbootswagger3.vo.UserAddResponseVo;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-05-18
  */
 @RestController
-@Api(tags = "Demo")
+@Tag(name = "Demo")
 public class ApiDemoV1Controller {
 
-    @ApiOperation("添加用户")
+    @Operation(summary = "添加用户")
     @PostMapping("/userAdd")
     public ResultTemplate<UserAddResponseVo> userAdd(UserAddRequestVo requestVo) {
 
