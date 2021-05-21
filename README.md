@@ -30,5 +30,9 @@
 - [x] [demo-springboot-swagger-3](./demo-springboot-swagger-3): Spring Boot 集成 Swagger 3.0 示例
 - [ ] [demo-springboot-websocket](./demo-springboot-websocket): Spring Boot 集成 WebSocket 示例
 - [ ] [demo-springboot-rocketmq](./demo-springboot-rocketmq): Spring Boot 集成 RocketMQ 示例
+- [ ] [demo-springboot-excel](./demo-springboot-excel): Spring Boot 集成 Excel 示例
+- [ ] [demo-springboot-csv](./demo-springboot-csv): Spring Boot 集成 CSV 示例
+- [ ] [demo-springboot-upload](./demo-springboot-upload): Spring Boot 文件上传 示例
+- [ ] [demo-springboot-download](./demo-springboot-download): Spring Boot 文件下载 示例
 
 

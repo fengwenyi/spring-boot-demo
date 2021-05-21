@@ -9,11 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-springboot-validated</artifactId>
+    <artifactId>demo-springboot-excel</artifactId>
 
     <properties>
-        <api-result.version>2.3.1</api-result.version>
+        <poi.version>3.15</poi.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -34,14 +36,21 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.fengwenyi</groupId>
-            <artifactId>api-result</artifactId>
-            <version>${api-result.version}</version>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
         </dependency>
     </dependencies>
 

@@ -33,6 +33,10 @@
         <module>demo-springboot-mybatis-plus</module>
         <module>demo-springboot-swagger-2</module>
         <module>demo-springboot-swagger-3</module>
+        <module>demo-springboot-excel</module>
+        <module>demo-springboot-csv</module>
+        <module>demo-springboot-upload</module>
+        <module>demo-springboot-download</module>
     </modules>
 
     <parent>
@@ -51,26 +55,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <api-result.version>2.3.1</api-result.version>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
