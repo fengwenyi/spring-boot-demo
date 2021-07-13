@@ -37,6 +37,7 @@
         <module>demo-springboot-csv</module>
         <module>demo-springboot-upload</module>
         <module>demo-springboot-download</module>
+        <module>demo-springboot-thymeleaf</module>
     </modules>
 
     <parent>
