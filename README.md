@@ -8,6 +8,8 @@
 - [x] [demo-springboot-elasticsearch](./demo-springboot-elasticsearch): Spring Boot 集成 ElasticSearch 示例
 - [ ] [demo-springboot-aop](./demo-springboot-aop): Spring Boot 集成 AOP 示例
 - [ ] [demo-springboot-async](./demo-springboot-async): Spring Boot 集成 @Async 示例
+- [ ] [demo-springboot-cache](./demo-springboot-cache): Spring Boot 集成 Cache 示例，缓存
+- [x] [demo-springboot-caffeine](./demo-springboot-caffeine): Spring Boot 集成 Caffeine 示例，缓存
 - [ ] [demo-springboot-docker](./demo-springboot-docker): Spring Boot 集成 Docker 示例
 - [ ] [demo-springboot-email](./demo-springboot-email): Spring Boot 集成 EMail 示例
 - [ ] [demo-springboot-hibernate](./demo-springboot-hibernate): Spring Boot 集成 Hibernate 示例

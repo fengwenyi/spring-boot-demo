@@ -38,6 +38,8 @@
         <module>demo-springboot-upload</module>
         <module>demo-springboot-download</module>
         <module>demo-springboot-thymeleaf</module>
+        <module>demo-springboot-cache</module>
+        <module>demo-springboot-caffeine</module>
     </modules>
 
     <parent>

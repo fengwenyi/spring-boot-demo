@@ -1,0 +1,6 @@
+spring:
+  cache:
+    type: caffeine
+    cache-names: goods
+    caffeine:
+      spec: maximumSize=500, expireAfterAccess=30s
