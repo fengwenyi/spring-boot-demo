@@ -20,6 +20,7 @@
 - [ ] [demo-springboot-logback](./demo-springboot-logback): Spring Boot 集成 logback 示例
 - [ ] [demo-springboot-mybatis](./demo-springboot-mybatis): Spring Boot 集成 MyBatis 示例
 - [ ] [demo-springboot-mybatis-plus](./demo-springboot-mybatis-plus): Spring Boot 集成 MyBatis-Plus 示例
+- [x] [demo-springboot-netty](./demo-springboot-netty): Spring Boot 集成 Netty 示例
 - [ ] [demo-springboot-oss](./demo-springboot-oss): Spring Boot 集成 OSS 示例
 - [ ] [demo-springboot-poi](./demo-springboot-poi): Spring Boot 集成 POI 示例
 - [ ] [demo-springboot-rabbitmq](./demo-springboot-rabbitmq): Spring Boot 集成 RabbitMQ 示例
@@ -27,6 +28,7 @@
 - [x] [demo-springboot-sa-token](./demo-springboot-sa-token): Spring Boot 集成 Sa-Token 示例
 - [ ] [demo-springboot-security](./demo-springboot-security): Spring Boot 集成 Spring Security 示例
 - [ ] [demo-springboot-shiro](./demo-springboot-shiro): Spring Boot 集成 Apache Shiro 示例
+- [ ] [demo-springboot-socket](./demo-springboot-socket): Spring Boot 集成 Socket 示例
 - [ ] [demo-springboot-swagger](./demo-springboot-swagger): Spring Boot 集成 Swagger 示例
 - [x] [demo-springboot-swagger-2](./demo-springboot-swagger): Spring Boot 集成 Swagger 2 示例
 - [x] [demo-springboot-swagger-3](./demo-springboot-swagger-3): Spring Boot 集成 Swagger 3.0 示例

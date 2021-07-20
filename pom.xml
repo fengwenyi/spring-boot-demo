@@ -40,6 +40,8 @@
         <module>demo-springboot-thymeleaf</module>
         <module>demo-springboot-cache</module>
         <module>demo-springboot-caffeine</module>
+        <module>demo-springboot-socket</module>
+        <module>demo-springboot-netty</module>
     </modules>
 
     <parent>
@@ -76,5 +78,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>aliyun-maven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
 
 </project>
