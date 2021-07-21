@@ -37,6 +37,7 @@
 - [x] [demo-springboot-excel](./demo-springboot-excel): Spring Boot 集成 Excel 示例
 - [x] [demo-springboot-csv](./demo-springboot-csv): Spring Boot 集成 CSV 示例
 - [x] [demo-springboot-thymeleaf](./demo-springboot-thymeleaf): Spring Boot 集成 Thymeleaf 示例
+- [x] [demo-springboot-tidb](./demo-springboot-tidb): Spring Boot 集成 TiDB 示例
 - [ ] [demo-springboot-upload](./demo-springboot-upload): Spring Boot 文件上传 示例
 - [ ] [demo-springboot-download](./demo-springboot-download): Spring Boot 文件下载 示例
 

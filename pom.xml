@@ -42,6 +42,7 @@
         <module>demo-springboot-caffeine</module>
         <module>demo-springboot-socket</module>
         <module>demo-springboot-netty</module>
+        <module>demo-springboot-tidb</module>
     </modules>
 
     <parent>
