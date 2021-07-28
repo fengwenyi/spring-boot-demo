@@ -43,6 +43,7 @@
         <module>demo-springboot-socket</module>
         <module>demo-springboot-netty</module>
         <module>demo-springboot-tidb</module>
+        <module>demo-springboot-druid</module>
     </modules>
 
     <parent>

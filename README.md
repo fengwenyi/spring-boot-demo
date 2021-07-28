@@ -11,6 +11,7 @@
 - [ ] [demo-springboot-cache](./demo-springboot-cache): Spring Boot 集成 Cache 示例，缓存
 - [x] [demo-springboot-caffeine](./demo-springboot-caffeine): Spring Boot 集成 Caffeine 示例，缓存
 - [ ] [demo-springboot-docker](./demo-springboot-docker): Spring Boot 集成 Docker 示例
+- [x] [demo-springboot-druid](./demo-springboot-druid): Spring Boot 集成 Druid 示例
 - [ ] [demo-springboot-email](./demo-springboot-email): Spring Boot 集成 EMail 示例
 - [ ] [demo-springboot-hibernate](./demo-springboot-hibernate): Spring Boot 集成 Hibernate 示例
 - [ ] [demo-springboot-jdbc](./demo-springboot-jdbc): Spring Boot 集成 JDBC 示例
