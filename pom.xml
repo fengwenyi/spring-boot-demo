@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>demo-springboot</module>
+        <module>spring-boot-hello</module>
         <module>demo-springboot-redis</module>
         <module>demo-springboot-validated</module>
         <module>demo-springboot-sa-token</module>
@@ -54,11 +54,11 @@
     </parent>
 
     <groupId>com.fengwenyi</groupId>
-    <artifactId>springboot-demo</artifactId>
+    <artifactId>spring-boot-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>springboot-demo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>spring-boot-demo</name>
+    <description>Spring Boot Demo</description>
 
     <properties>
         <java.version>1.8</java.version>

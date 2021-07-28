@@ -2,11 +2,14 @@
 
 ## 项目
 
-- [ ] [demo-springboot](./demo-springboot): spring boot demo
+- [ ] [demo-spring-boot-aop](./demo-spring-boot-aop): Spring Boot 集成 AOP 示例
+- [ ] [demo-spring-boot-hello](./demo-spring-boot-hello): spring boot hello
+  
+
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例
 - [x] [demo-springboot-validated](./demo-springboot-validated): Spring Boot参数校验
 - [x] [demo-springboot-elasticsearch](./demo-springboot-elasticsearch): Spring Boot 集成 ElasticSearch 示例
-- [ ] [demo-springboot-aop](./demo-springboot-aop): Spring Boot 集成 AOP 示例
+
 - [ ] [demo-springboot-async](./demo-springboot-async): Spring Boot 集成 @Async 示例
 - [ ] [demo-springboot-cache](./demo-springboot-cache): Spring Boot 集成 Cache 示例，缓存
 - [x] [demo-springboot-caffeine](./demo-springboot-caffeine): Spring Boot 集成 Caffeine 示例，缓存
