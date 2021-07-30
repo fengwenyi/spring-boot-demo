@@ -3,19 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-boot-demo</artifactId>
+        <artifactId>demo-spring-boot-netty</artifactId>
         <groupId>com.fengwenyi</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-spring-boot-netty</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>demo-spring-boot-netty-server</module>
-        <module>demo-spring-boot-netty-client</module>
-        <module>demo-spring-boot-netty-server-new</module>
-        <module>demo-spring-boot-netty-server-starter</module>
-    </modules>
+    <artifactId>demo-spring-boot-netty-server-starter</artifactId>
+
+    <dependencies>
+        <!--<dependency>
+            <groupId>co.wangming</groupId>
+            <artifactId>netty-spring-boot-starter</artifactId>
+            <version>0.1</version>
+        </dependency>-->
+    </dependencies>
 
 </project>
