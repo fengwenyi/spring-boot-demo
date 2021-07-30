@@ -12,8 +12,8 @@
     <artifactId>demo-spring-boot-netty</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>demo-springboot-netty-server</module>
-        <module>demo-springboot-netty-client</module>
+        <module>demo-spring-boot-netty-server</module>
+        <module>demo-spring-boot-netty-client</module>
     </modules>
 
     <dependencies>
