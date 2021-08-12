@@ -1,7 +1,9 @@
-package com.fengwenyi.demospringbootwebsocket.vo;
+package com.fengwenyi.demospringbootwebsocket.domain;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
+
+import javax.websocket.Session;
 
 /**
  * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
@@ -9,12 +11,12 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class ResponseVo {
+public class UserModel {
 
-    private Integer msgType;
+    private String id;
 
     private String username;
 
-    private String message;
+    private Session session;
 
 }

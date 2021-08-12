@@ -9,5 +9,8 @@ public interface IMsgService {
     boolean sendMsg(String clientId, String message);
 
     // 群发
-    boolean sendMsgAll(String message);
+    boolean sendMsgAll(String senderId, String message);
+
+    // 广播
+    void sendBroadcast(String message);
 }
