@@ -4,6 +4,7 @@
 
 - [ ] [demo-spring-boot-aop](./demo-spring-boot-aop): Spring Boot 集成 AOP 示例
 - [ ] [demo-spring-boot-hello](./demo-spring-boot-hello): spring boot hello
+- [x] [demo-spring-boot-websocket](./demo-spring-boot-websocket): Spring Boot 集成 WebSocket 示例
   
 
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例
@@ -36,7 +37,7 @@
 - [ ] [demo-springboot-swagger](./demo-springboot-swagger): Spring Boot 集成 Swagger 示例
 - [x] [demo-springboot-swagger-2](./demo-springboot-swagger): Spring Boot 集成 Swagger 2 示例
 - [x] [demo-springboot-swagger-3](./demo-springboot-swagger-3): Spring Boot 集成 Swagger 3.0 示例
-- [ ] [demo-springboot-websocket](./demo-springboot-websocket): Spring Boot 集成 WebSocket 示例
+
 - [ ] [demo-springboot-rocketmq](./demo-springboot-rocketmq): Spring Boot 集成 RocketMQ 示例
 - [x] [demo-springboot-excel](./demo-springboot-excel): Spring Boot 集成 Excel 示例
 - [x] [demo-springboot-csv](./demo-springboot-csv): Spring Boot 集成 CSV 示例
@@ -44,5 +45,6 @@
 - [x] [demo-springboot-tidb](./demo-springboot-tidb): Spring Boot 集成 TiDB 示例
 - [ ] [demo-springboot-upload](./demo-springboot-upload): Spring Boot 文件上传 示例
 - [ ] [demo-springboot-download](./demo-springboot-download): Spring Boot 文件下载 示例
+
 
 

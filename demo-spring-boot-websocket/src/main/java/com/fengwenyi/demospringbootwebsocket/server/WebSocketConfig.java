@@ -1,18 +1,14 @@
-package com.fengwenyi.demospringbootwebsocket.config;
+package com.fengwenyi.demospringbootwebsocket.server;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 /**
- * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
- * @since 2021-08-12
+ * @author Wenyi Feng
  */
 @Configuration
-@EnableWebSocket
-public class WebSocketConfiguration {
-
+public class WebSocketConfig {
     @Bean
     public ServerEndpointExporter serverEndpointExporter() {
         return new ServerEndpointExporter();

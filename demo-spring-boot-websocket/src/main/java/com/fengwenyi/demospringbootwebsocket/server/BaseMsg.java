@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootwebsocket.service;
+package com.fengwenyi.demospringbootwebsocket.server;
 
 import javax.websocket.Session;
 import java.io.IOException;
