@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootwebsocket.server;
+package com.fengwenyi.demojavaxwebsocket.server;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

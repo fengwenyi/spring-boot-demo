@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootwebsocket.server;
+package com.fengwenyi.demojavaxwebsocket.server;
 
 /**
  * @author Wenyi Feng

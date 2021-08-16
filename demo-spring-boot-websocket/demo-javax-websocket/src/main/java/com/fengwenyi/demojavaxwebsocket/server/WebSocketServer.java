@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootwebsocket.server;
+package com.fengwenyi.demojavaxwebsocket.server;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

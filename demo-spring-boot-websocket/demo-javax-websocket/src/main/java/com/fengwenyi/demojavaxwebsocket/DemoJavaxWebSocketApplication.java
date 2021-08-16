@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootwebsocket;
+package com.fengwenyi.demojavaxwebsocket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,13 +9,13 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
- * @since 2021-08-12
+ * @since 2021-08-16
  */
 @SpringBootApplication
-public class DemoSpringBootWebSocketApplication {
+public class DemoJavaxWebSocketApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoSpringBootWebSocketApplication.class, args);
+        SpringApplication.run(DemoJavaxWebSocketApplication.class, args);
     }
 
     private CorsConfiguration buildConfig() {

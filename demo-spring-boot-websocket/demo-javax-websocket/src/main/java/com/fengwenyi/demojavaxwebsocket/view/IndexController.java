@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootwebsocket.view;
+package com.fengwenyi.demojavaxwebsocket.view;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
