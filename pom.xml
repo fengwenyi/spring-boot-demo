@@ -44,6 +44,7 @@
         <module>demo-spring-boot-netty</module>
         <module>demo-spring-boot-tidb</module>
         <module>demo-spring-boot-druid</module>
+        <module>demo-spring-boot-event</module>
     </modules>
 
     <parent>
