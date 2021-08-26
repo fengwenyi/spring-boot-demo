@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo-spring-boot-jpa</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>demo-spring-boot-jpa-auditing</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

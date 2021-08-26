@@ -48,5 +48,10 @@
 - [ ] [demo-springboot-upload](./demo-springboot-upload): Spring Boot 文件上传 示例
 - [ ] [demo-springboot-download](./demo-springboot-download): Spring Boot 文件下载 示例
 
+## spring data
+
+### Spring Data JPA
+
+- [x] [demo-spring-boot-jpa-auditing](demo-spring-boot-jpa/demo-spring-boot-jpa-auditing): spring data jpa 审计功能示例
 
 
