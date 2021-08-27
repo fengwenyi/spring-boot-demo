@@ -2,7 +2,7 @@
 
 ## 项目
 
-- [ ] [demo-spring-boot-aop](./demo-spring-boot-aop): Spring Boot 集成 AOP 示例
+- [x] [demo-spring-boot-aop](demo-spring-boot-aop): Spring Boot 集成 AOP 示例
 - [x] [demo-spring-boot-event](demo-spring-boot-event): spring boot event 示例
 - [ ] [demo-spring-boot-hello](./demo-spring-boot-hello): spring boot hello
 - [x] [demo-spring-boot-webflux](demo-spring-boot-webflux): Spring Boot WebFlux 示例
