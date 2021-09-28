@@ -4,9 +4,11 @@
 
 - [x] [demo-spring-boot-aop](demo-spring-boot-aop): Spring Boot 集成 AOP 示例
 - [x] [demo-spring-boot-event](demo-spring-boot-event): spring boot event 示例
-- [ ] [demo-spring-boot-hello](./demo-spring-boot-hello): spring boot hello
+- [ ] [demo-spring-boot-hello](demo-spring-boot-hello): spring boot hello
+- [x] [demo-spring-boot-metadata](demo-spring-boot-metadata): Spring Boot Metadata 示例
+- [x] [demo-spring-boot-scheduled](demo-spring-boot-scheduled): Spring Boot Scheduled 示例
 - [x] [demo-spring-boot-webflux](demo-spring-boot-webflux): Spring Boot WebFlux 示例
-- [x] [demo-spring-boot-websocket](./demo-spring-boot-websocket): Spring Boot 集成 WebSocket 示例
+- [x] [demo-spring-boot-websocket](demo-spring-boot-websocket): Spring Boot 集成 WebSocket 示例
   
 
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例
@@ -47,6 +49,8 @@
 - [x] [demo-springboot-tidb](./demo-springboot-tidb): Spring Boot 集成 TiDB 示例
 - [ ] [demo-springboot-upload](./demo-springboot-upload): Spring Boot 文件上传 示例
 - [ ] [demo-springboot-download](./demo-springboot-download): Spring Boot 文件下载 示例
+
+
 
 ## spring data
 

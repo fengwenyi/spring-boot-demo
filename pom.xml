@@ -46,12 +46,14 @@
         <module>demo-spring-boot-druid</module>
         <module>demo-spring-boot-event</module>
         <module>demo-spring-boot-webflux</module>
+        <module>demo-spring-boot-metadata</module>
+        <module>demo-spring-boot-scheduled</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.5</version>
+        <version>2.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
