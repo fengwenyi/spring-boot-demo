@@ -118,7 +118,7 @@ public class ScheduledTask {
     }
 
     // fixedRate 间隔时间小于任务时间
-    @Scheduled(fixedRate = 3, timeUnit = TimeUnit.SECONDS)
+    // @Scheduled(fixedRate = 3, timeUnit = TimeUnit.SECONDS)
     public void testFixedRate02() {
         String id = Utils.genId();
         log.info("{}--------------定时任务开始", id);
