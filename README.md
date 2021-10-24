@@ -3,6 +3,7 @@
 ## 项目
 
 - [x] [demo-spring-boot-aop](demo-spring-boot-aop): Spring Boot 集成 AOP 示例
+- [x] [demo-spring-boot-api-result](demo-spring-boot-api-result): Spring Boot 集成 api-result 示例
 - [x] [demo-spring-boot-event](demo-spring-boot-event): spring boot event 示例
 - [ ] [demo-spring-boot-hello](demo-spring-boot-hello): spring boot hello
 - [x] [demo-spring-boot-metadata](demo-spring-boot-metadata): Spring Boot Metadata 示例
