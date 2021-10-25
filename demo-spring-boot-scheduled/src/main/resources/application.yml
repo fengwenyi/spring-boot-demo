@@ -1,0 +1,6 @@
+erwin:
+  cron: 0/10 * * * * ?
+  fixed-delay: 5
+  fixed-rate: 5
+
+

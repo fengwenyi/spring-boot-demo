@@ -102,7 +102,7 @@ public class ScheduledTask {
     }
 
     // fixedRate 间隔时间大于任务时间
-     @Scheduled(fixedRate = 5, timeUnit = TimeUnit.SECONDS)
+//     @Scheduled(fixedRate = 5, timeUnit = TimeUnit.SECONDS)
     public void testFixedRate01() {
         String id = Utils.genId();
         log.info("{}--------------定时任务开始", id);
@@ -133,12 +133,12 @@ public class ScheduledTask {
         log.info("{}==============定时任务结束==============", id);
     }
 
-    @Scheduled(cron = "0/5 * * * * ? ")
+//    @Scheduled(cron = "0/5 * * * * ? ")
     public void testCron01() {
         log.info("test cron 01 exec");
     }
 
-    @Scheduled(cron = "@hourly")
+//    @Scheduled(cron = "@hourly")
     public void testCron02() {
         log.info("test cron 02 exec");
     }
