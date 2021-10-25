@@ -48,6 +48,7 @@
         <module>demo-spring-boot-webflux</module>
         <module>demo-spring-boot-metadata</module>
         <module>demo-spring-boot-scheduled</module>
+        <module>demo-spring-boot-api-result</module>
     </modules>
 
     <parent>
