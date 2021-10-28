@@ -1,8 +1,10 @@
 package com.fengwenyi.demospringbootevent.controller;
 
-import com.fengwenyi.api.result.ResultTemplate;
-import com.fengwenyi.demospringbootevent.MyPublisher;
+import com.fengwenyi.api.result.ResponseTemplate;
+import com.fengwenyi.demospringbootevent.event.MyPublisher;
 import com.fengwenyi.demospringbootevent.vo.request.UserLoginRequestVo;
+import com.fengwenyi.javalib.util.MdcUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/user")
+@Slf4j
 public class UserController {
 
     private MyPublisher publisher;
@@ -23,9 +26,26 @@ public class UserController {
     }
 
     @RequestMapping("/login")
-    public ResultTemplate<?> login(UserLoginRequestVo requestVo) {
+    public ResponseTemplate<?> login(UserLoginRequestVo requestVo) {
         publisher.userLoginEvent(requestVo.getUsername());
-        return ResultTemplate.success();
+        return ResponseTemplate.success();
+    }
+
+    @RequestMapping("/exception")
+    public ResponseTemplate<?> exception(String msg) {
+        MdcUtils.call("异常接口", msg);
+        log.info("请求");
+        publisher.alarm(msg);
+        log.info("触发完成");
+        return ResponseTemplate.fail();
+    }
+
+    @RequestMapping("/logout")
+    public ResponseTemplate<?> logout(String uid) {
+        log.info("用户登出请求-{}", uid);
+        publisher.logout(uid);
+        log.info("用户登出事件发布完成");
+        return ResponseTemplate.success();
     }
 
 }

@@ -77,3 +77,35 @@ public class UserLoginEventListener implements ApplicationListener<UserLoginEven
     }
 }
 ```
+
+## 补充
+
+### 1、多个监听
+
+支持多个监听
+
+### 2、同步
+
+发布事件 -> 监听1-执行完成 -> 监听2-执行完成 -> ... -> 返回到发布事件，继续执行后面的方法
+
+### 3、异步
+
+如果需要异步支持，需要开启异步支持
+
+`@EnableAsync` + `@Async`
+
+主线程：发布事件 -> 监听1 -> 监听2 -> ... -> 返回到发布事件，继续执行后面的方法
+
+异步线程1：监听1执行完成
+
+异步线程2：监听1执行完成
+
+### 4、可以不监听
+
+可以只发布，不监听
+
+
+### 5、Observer
+
+ApplicationContext基于Observer模式（java.util包中有对应实现），提供了针对Bean的事件传
+播功能。

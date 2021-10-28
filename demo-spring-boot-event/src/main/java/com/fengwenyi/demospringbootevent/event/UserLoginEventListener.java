@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootevent;
+package com.fengwenyi.demospringbootevent.event;
 
 import com.fengwenyi.demospringbootevent.event.UserLoginEvent;
 import lombok.extern.slf4j.Slf4j;
