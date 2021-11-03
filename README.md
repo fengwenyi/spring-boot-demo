@@ -10,6 +10,10 @@
 - [x] [demo-spring-boot-scheduled](demo-spring-boot-scheduled): Spring Boot Scheduled 示例
 - [x] [demo-spring-boot-webflux](demo-spring-boot-webflux): Spring Boot WebFlux 示例
 - [x] [demo-spring-boot-websocket](demo-spring-boot-websocket): Spring Boot 集成 WebSocket 示例
+- [ ] [demo-spring-boot-postgres-sql](): Spring Boot - PostgresSQL 示例
+- [ ] [demo-spring-boot-tidb](): Spring Boot - TiDB 示例
+- [ ] [demo-spring-boot-tidb](): Spring Boot - TiDB 示例
+- [ ] [demo-spring-boot-mycat2](): Spring Boot 使用Mycat2中间件实现分库分表 示例
   
 
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例
