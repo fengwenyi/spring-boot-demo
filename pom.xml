@@ -49,6 +49,7 @@
         <module>demo-spring-boot-metadata</module>
         <module>demo-spring-boot-scheduled</module>
         <module>demo-spring-boot-api-result</module>
+        <module>demo-spring-boot-jersey</module>
     </modules>
 
     <parent>

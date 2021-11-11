@@ -63,4 +63,11 @@
 
 - [x] [demo-spring-boot-jpa-auditing](demo-spring-boot-jpa/demo-spring-boot-jpa-auditing): spring data jpa 审计功能示例
 
+## 接口开发
+
+| 名称 | 描述 | 状态 | 更新时间 |
+| --- | --- | --- | --- |
+| [demo-spring-boot-jersey](./demo-spring-boot-jersey) | Spring Boot 集成 Jersey | 10% | 2021.11.12 |
+
+
 
