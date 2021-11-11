@@ -50,6 +50,7 @@
         <module>demo-spring-boot-scheduled</module>
         <module>demo-spring-boot-api-result</module>
         <module>demo-spring-boot-jersey</module>
+        <module>demo-spring-boot-mybatis-pagehelper</module>
     </modules>
 
     <parent>
