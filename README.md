@@ -73,7 +73,7 @@
 
 | 名称 | 描述 | 状态 | 更新时间 |
 | --- | --- | --- | --- |
-| [demo-spring-boot-ordered](./demo-spring-boot-ordered) | Ordered | - | 2021.11.16 |
+| [demo-spring-boot-order](./demo-spring-boot-order) | Ordered | - | 2021.11.16 |
 
 
 

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-spring-boot-ordered</artifactId>
+    <artifactId>demo-spring-boot-order</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
