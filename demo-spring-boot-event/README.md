@@ -109,3 +109,9 @@ public class UserLoginEventListener implements ApplicationListener<UserLoginEven
 
 ApplicationContext基于Observer模式（java.util包中有对应实现），提供了针对Bean的事件传
 播功能。
+
+
+## links
+
+- [spring cloud gateway RefreshRoutesEvent](https://github.com/spring-cloud/spring-cloud-gateway/blob/master/spring-cloud-gateway-core/src/main/java/org/springframework/cloud/gateway/event/RefreshRoutesEvent.java)
+- [spring boot event 入门](https://blog.csdn.net/weixin_42073629/article/details/106303089)
