@@ -69,5 +69,13 @@
 | --- | --- | --- | --- |
 | [demo-spring-boot-jersey](./demo-spring-boot-jersey) | Spring Boot 集成 Jersey | 10% | 2021.11.12 |
 
+## spring framework
 
+| 名称 | 描述 | 状态 | 更新时间 |
+| --- | --- | --- | --- |
+| [demo-spring-boot-ordered](./demo-spring-boot-ordered) | Ordered | - | 2021.11.16 |
+
+
+
+- [spring framework ordered](https://github.com/spring-projects/spring-framework/blob/main/spring-core/src/main/java/org/springframework/core/Ordered.java)
 
