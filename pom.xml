@@ -52,6 +52,7 @@
         <module>demo-spring-boot-jersey</module>
         <module>demo-spring-boot-mybatis-pagehelper</module>
         <module>demo-spring-boot-order</module>
+        <module>demo-spring-boot-jetty</module>
     </modules>
 
     <parent>

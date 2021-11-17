@@ -14,6 +14,7 @@
 - [ ] [demo-spring-boot-tidb](): Spring Boot - TiDB 示例
 - [ ] [demo-spring-boot-tidb](): Spring Boot - TiDB 示例
 - [ ] [demo-spring-boot-mycat2](): Spring Boot 使用Mycat2中间件实现分库分表 示例
+- [x] [demo-spring-boot-jetty](demo-spring-boot-jetty): 【2021.11.17】Spring Boot and Jetty demo
   
 
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例
