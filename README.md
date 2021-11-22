@@ -1,5 +1,7 @@
 # Spring Boot Demo
 
+2.6.0
+
 ## 项目
 
 - [x] [demo-spring-boot-aop](demo-spring-boot-aop): Spring Boot 集成 AOP 示例

@@ -54,12 +54,13 @@
         <module>demo-spring-boot-order</module>
         <module>demo-spring-boot-jetty</module>
         <module>demo-spring-boot-undertow</module>
+        <module>demo-spring-boot-feature</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.6</version>
+        <version>2.6.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
