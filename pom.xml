@@ -55,6 +55,8 @@
         <module>demo-spring-boot-jetty</module>
         <module>demo-spring-boot-undertow</module>
         <module>demo-spring-boot-feature</module>
+        <module>demo-spring-boot-future-task</module>
+        <module>demo-spring-boot-circular-bean</module>
     </modules>
 
     <parent>
