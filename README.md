@@ -20,6 +20,7 @@
 - [x] [demo-spring-boot-undertow](demo-spring-boot-undertow): 【2021.11.17】Spring Boot and Undertow demo
 - [x] [demo-spring-boot-future-task](demo-spring-boot-future-task): 【2021.11.23】Spring Boot and Future Task
 - [x] [demo-spring-boot-circular-bean](demo-spring-boot-circular-bean): 【2021.11.23】Spring Boot 循环依赖
+- [x] [demo-spring-boot-test](demo-spring-boot-test): 【2021.11.24】Spring Boot Test
   
 
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例

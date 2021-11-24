@@ -57,6 +57,7 @@
         <module>demo-spring-boot-feature</module>
         <module>demo-spring-boot-future-task</module>
         <module>demo-spring-boot-circular-bean</module>
+        <module>demo-spring-boot-test</module>
     </modules>
 
     <parent>
