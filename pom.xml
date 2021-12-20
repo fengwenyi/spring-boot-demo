@@ -59,6 +59,7 @@
         <module>demo-spring-boot-circular-bean</module>
         <module>demo-spring-boot-test</module>
         <module>demo-spring-boot-guava</module>
+        <module>demo-spring-boot-log</module>
     </modules>
 
     <parent>
