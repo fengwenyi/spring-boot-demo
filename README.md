@@ -22,6 +22,7 @@
 - [x] [demo-spring-boot-circular-bean](demo-spring-boot-circular-bean): 【2021.11.23】Spring Boot 循环依赖
 - [x] [demo-spring-boot-test](demo-spring-boot-test): 【2021.11.24】Spring Boot Test
 - [ ] [demo-spring-boot-guava](demo-spring-boot-guava): 【2021.11.30】Spring Boot and Google Guava
+- [ ] [demo-spring-boot-log](demo-spring-boot-log): 【2021.12.21】Java 日志体系模块
   
 
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例
