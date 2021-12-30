@@ -1,4 +1,7 @@
 spring:
   messages:
-    basename: "i18n/message"
+    basename: "i18n/message,i18n/message_en_US,i18n/message_zh_CN"
     encoding: UTF-8
+    use-code-as-default-message: true # 找不到默认抛异常
+    fallback-to-system-locale: true
+    cache-duration: 3600 # 缓存 单位秒，不配置，永久有效
