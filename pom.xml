@@ -61,6 +61,7 @@
         <module>demo-spring-boot-guava</module>
         <module>demo-spring-boot-log</module>
         <module>demo-spring-boot-webservice</module>
+        <module>demo-spring-boot-locale</module>
     </modules>
 
     <parent>
