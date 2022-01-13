@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootsatoken.vo;
+package com.fengwenyi.demospringbootsatoken.vo.response;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
