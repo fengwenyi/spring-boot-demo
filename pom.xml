@@ -63,6 +63,8 @@
         <module>demo-spring-boot-webservice</module>
         <module>demo-spring-boot-locale</module>
         <module>demo-spring-boot-activiti</module>
+        <module>demo-spring-boot-jsonview</module>
+        <module>demo-spring-boot-shell</module>
     </modules>
 
     <parent>

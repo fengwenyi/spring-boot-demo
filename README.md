@@ -24,6 +24,8 @@
 - [ ] [demo-spring-boot-guava](demo-spring-boot-guava): 【2021.11.30】Spring Boot and Google Guava
 - [ ] [demo-spring-boot-log](demo-spring-boot-log): 【2021.12.21】Java 日志体系模块
 - [ ] [demo-spring-boot-locale](demo-spring-boot-locale): 【2021.12.30】Spring Boot 国际化
+- [ ] [demo-spring-boot-jsonview](demo-spring-boot-jsonview): 【2022.2.8】Spring Boot JsonView 列表和详情字段返回限制
+- [x] [demo-spring-boot-shell](demo-spring-boot-shell): 【2022.2.8】Spring Boot Shell
   
 
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例
