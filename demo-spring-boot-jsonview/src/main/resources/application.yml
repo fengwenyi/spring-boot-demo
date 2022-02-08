@@ -1,0 +1,8 @@
+#spring:
+#  jackson:
+#    default-property-inclusion: non_empty
+
+spring:
+  jackson:
+    mapper:
+      DEFAULT_VIEW_INCLUSION: true
