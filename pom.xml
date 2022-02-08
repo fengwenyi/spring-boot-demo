@@ -62,12 +62,13 @@
         <module>demo-spring-boot-log</module>
         <module>demo-spring-boot-webservice</module>
         <module>demo-spring-boot-locale</module>
+        <module>demo-spring-boot-activiti</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.2</version>
+        <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -80,7 +81,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <spring-boot.version>2.6.1</spring-boot.version>
+        <spring-boot.version>2.6.3</spring-boot.version>
     </properties>
 
     <build>
