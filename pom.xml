@@ -65,6 +65,7 @@
         <module>demo-spring-boot-activiti</module>
         <module>demo-spring-boot-jsonview</module>
         <module>demo-spring-boot-shell</module>
+        <module>demo-spring-boot-vue3</module>
     </modules>
 
     <parent>
