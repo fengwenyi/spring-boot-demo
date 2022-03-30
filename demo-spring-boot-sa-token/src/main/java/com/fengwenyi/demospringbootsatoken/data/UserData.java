@@ -1,7 +1,9 @@
 package com.fengwenyi.demospringbootsatoken.data;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
@@ -40,6 +42,19 @@ public class UserData {
             }
         }
         return null;
+    }
+
+    public static User queryByUid(String uid) {
+        for (Map.Entry<String, User> entry : users.entrySet()) {
+            if (uid.equals(entry.getValue().uid)) {
+                return entry.getValue();
+            }
+        }
+        return null;
+    }
+
+    public static List<User> queryAll() {
+        return new ArrayList<>(users.values());
     }
 
 }
