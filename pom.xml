@@ -84,7 +84,7 @@
     <description>Spring Boot Demo</description>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>1.8</java.version>
         <spring-boot.version>2.6.5</spring-boot.version>
     </properties>
 
