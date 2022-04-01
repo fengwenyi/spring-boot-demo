@@ -5,6 +5,7 @@ import com.fengwenyi.demospringbootsatoken.data.UserData;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public class StpInterfaceImpl implements StpInterface {
             return null;
         }
         if (roles.contains("ROLE_ADMIN")) {
-            return List.of("ADD", "DELETE", "UPDATE", "QUERY");
+            return Arrays.asList("ADD", "DELETE", "UPDATE", "QUERY");
         }
         return null;
     }

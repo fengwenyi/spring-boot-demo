@@ -62,6 +62,7 @@ public class UserController {
 
     @SaCheckRole("ROLE_USER")
     @GetMapping
+    @SuppressWarnings("all")
     public ResponseTemplate<?> get(PageRequestVo requestVo) {
         log.info(JsonUtils.convertString(requestVo));
         List<UserData.User> users = UserData.queryAll();

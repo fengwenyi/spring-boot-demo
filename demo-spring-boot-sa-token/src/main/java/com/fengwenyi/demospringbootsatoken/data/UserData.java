@@ -1,9 +1,6 @@
 package com.fengwenyi.demospringbootsatoken.data;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.*;
 
 /**
  * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
@@ -11,10 +8,12 @@ import java.util.stream.Collectors;
  */
 public class UserData {
 
-    private static final Map<String, User> users = Map.of(
-            "u1", new User("01", "u1", "123456", List.of("ROLE_USER")),
-            "a2", new User("02", "a2", "123456", List.of("ROLE_ADMIN", "ROLE_USER"))
-    );
+    private static final Map<String, User> users = new HashMap<>();
+
+    static {
+        users.put("u1", new User("01", "u1", "123456", Collections.singletonList("ROLE_USER")));
+        users.put("a2", new User("02", "a2", "123456", Arrays.asList("ROLE_ADMIN", "ROLE_USER")));
+    }
 
 
     public static class User {
