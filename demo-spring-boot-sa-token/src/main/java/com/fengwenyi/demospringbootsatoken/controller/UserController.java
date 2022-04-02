@@ -1,6 +1,7 @@
 package com.fengwenyi.demospringbootsatoken.controller;
 
 import cn.dev33.satoken.annotation.SaCheckRole;
+import cn.dev33.satoken.annotation.SaMode;
 import com.fengwenyi.api.result.PageRequestVo;
 import com.fengwenyi.api.result.ResponseTemplate;
 import com.fengwenyi.demospringbootsatoken.data.UserData;
@@ -22,30 +23,31 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/user")
 @Slf4j
+@SaCheckRole(value = {"ROLE_USER", "ROLE_ADMIN"}, mode = SaMode.OR)
 public class UserController {
 
-    @SaCheckRole("ROLE_USER")
+//    @SaCheckRole("ROLE_USER")
     @PostMapping
     public ResponseTemplate<?> add(@RequestBody UserRequestVo requestVo) {
         log.info(JsonUtils.convertString(requestVo));
         return ResponseTemplate.success();
     }
 
-    @SaCheckRole("ROLE_USER")
+//    @SaCheckRole("ROLE_USER")
     @DeleteMapping("/{id}")
     public ResponseTemplate<?> delete(@PathVariable String id) {
         log.info("id={}", id);
         return ResponseTemplate.success();
     }
 
-    @SaCheckRole("ROLE_USER")
+//    @SaCheckRole("ROLE_USER")
     @PutMapping("/{id}")
     public ResponseTemplate<?> update(@PathVariable String id, UserRequestVo requestVo) {
         log.info("id={}, user={}", id, JsonUtils.convertString(requestVo));
         return ResponseTemplate.success();
     }
 
-    @SaCheckRole("ROLE_USER")
+//    @SaCheckRole("ROLE_USER")
     @GetMapping("/{id}")
     public ResponseTemplate<?> get(@PathVariable String id) {
         log.info("id={}", id);
@@ -60,7 +62,7 @@ public class UserController {
         return ResponseTemplate.success(responseVo);
     }
 
-    @SaCheckRole("ROLE_USER")
+//    @SaCheckRole("ROLE_USER")
     @GetMapping
     @SuppressWarnings("all")
     public ResponseTemplate<?> get(PageRequestVo requestVo) {

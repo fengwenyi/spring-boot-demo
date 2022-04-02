@@ -1,6 +1,6 @@
 # Spring Boot Demo
 
-2.6.0
+2.6.5
 
 ## 项目
 
