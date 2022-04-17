@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fengwenyi.demospringbootmybatisplus.dao.IGoodsDao">
+
+    <select id="queryByName" resultType="com.fengwenyi.demospringbootmybatisplus.entity.GoodsEntity">
+        select
+            *
+        from
+            t_goods t
+        where
+            t.name like concat('%', #{name}, '%')
+    </select>
+
+</mapper>

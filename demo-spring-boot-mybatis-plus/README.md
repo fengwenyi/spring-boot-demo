@@ -29,3 +29,41 @@ public class UserService {
 }
 ```
 
+## 注意事项
+
+### 1、在 xml 中写 SQL，MyBatis-Plus 不会自动拼接逻辑删除
+
+#### 使用框架
+
+代码片段：
+
+```java
+List<GoodsEntity> list = goodsDao.queryByName("Redmi");
+```
+
+执行的SQL
+
+```mysql
+SELECT * FROM t_goods WHERE deleted_state=0 AND (name LIKE ?)
+```
+
+> 为了方便查看，查询的字段使用星号（ * ）作替换
+
+#### 在 xml 中写的SQL
+
+```xml
+<select id="queryByName" resultType="com.fengwenyi.demospringbootmybatisplus.entity.GoodsEntity">
+    select
+        *
+    from
+        t_goods t
+    where
+        t.name like concat('%', #{name}, '%')
+</select>
+```
+
+执行的SQL
+
+```mysql
+select * from t_goods t where t.name like concat('%', ?, '%')
+```

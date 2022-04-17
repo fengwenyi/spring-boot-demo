@@ -1,15 +1,16 @@
 package com.fengwenyi.demospringbootmybatisplus.entity;
 
-import lombok.Data;
+import com.fengwenyi.demospringbootmybatisplus.base.BaseBizEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
  * @since 2021-11-23
  */
-@Data
-public class UserEntity {
-
-    private Long id;
+@Getter
+@Setter
+public class UserEntity extends BaseBizEntity {
 
     private String username;
 

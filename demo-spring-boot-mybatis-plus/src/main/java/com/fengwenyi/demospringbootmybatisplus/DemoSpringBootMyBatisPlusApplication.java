@@ -1,5 +1,6 @@
 package com.fengwenyi.demospringbootmybatisplus;
 
+import com.fengwenyi.apistarter.EnableApiStarter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2021-11-23
  */
 @SpringBootApplication
+@EnableApiStarter
 public class DemoSpringBootMyBatisPlusApplication {
 
     public static void main(String[] args) {
