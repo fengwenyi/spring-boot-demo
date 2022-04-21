@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>demo-spring-boot-jpa-auditing</module>
+        <module>demo-spring-boot-jpa-specification</module>
     </modules>
 
     <properties>
