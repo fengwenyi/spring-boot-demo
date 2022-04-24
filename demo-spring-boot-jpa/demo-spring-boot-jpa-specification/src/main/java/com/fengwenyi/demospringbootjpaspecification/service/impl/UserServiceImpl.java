@@ -58,4 +58,12 @@ public class UserServiceImpl implements IUserService {
         Page<UserEntity> userPage = userRepository.findAll(specification, pageRequest);
     }
 
+    public void add() {
+
+        UserEntity user = userRepository.getById(1L);
+        user.setId(null);
+        userRepository.save(user);
+
+    }
+
 }

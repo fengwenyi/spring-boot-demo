@@ -1,6 +1,7 @@
 package com.fengwenyi.demospringbootjpaspecification.repository;
 
 import com.fengwenyi.demospringbootjpaspecification.entity.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
@@ -9,5 +10,5 @@ import org.springframework.stereotype.Repository;
  * @since 2022-04-21
  */
 @Repository
-public interface IUserRepository extends JpaSpecificationExecutor<UserEntity> {
+public interface IUserRepository extends JpaSpecificationExecutor<UserEntity>, JpaRepository<UserEntity, Long> {
 }
