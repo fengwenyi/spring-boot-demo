@@ -1,7 +1,7 @@
-FROM openjdk:17-jdk-alpine
+FROM openjdk:8-jdk-alpine
 MAINTAINER Erwin Feng xfsy_2015@163.com
 
-ENV active = 'dev'
+ENV VERSION=1.0.0
 
 COPY target/demo-spring-boot-docker-*.jar /app.jar
-ENTRYPOINT ["sh", "-c", "java -jar app.jar --spring.profiles.active=$active"]
+ENTRYPOINT ["sh", "-c", "java -jar app.jar"]
