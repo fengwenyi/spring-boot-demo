@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 商品 dao 测试
@@ -56,10 +57,19 @@ public class GoodsTest extends DemoSpringBootMyBatisPlusApplicationTests {
 
     @Test
     public void pageHelper() {
-        Page<Object> pageRequest = PageHelper.startPage(1, 1);
-        List<GoodsEntity> list = goodsDao.selectList(null);
-        log.info("page: [{}]", pageRequest);
-        log.info("page list: [{}]", JsonUtils.convertString(list));
+        try (Page<GoodsEntity> page = PageHelper.startPage(1, 1)) {
+            List<GoodsEntity> list = goodsDao.selectList(null);
+//        log.info("page: [{}]", JsonUtils.convertString(page));
+//        log.info("page list: [{}]", page.getResult());
+//        log.info("page info : [{}]", page.toPageInfo());
+//        log.info("page info list : [{}]", page.toPageInfo().getList());
+//        log.info("page list: [{}]", JsonUtils.convertString(list));
+            log.info("currentPage: [{}]", page.getPageNum());
+            log.info("pageSize: [{}]", page.getPageSize());
+            log.info("total: [{}]", page.getTotal());
+            log.info("pages: [{}]", page.getPages());
+            log.info("list: [{}]", JsonUtils.convertString(page.getResult()));
+        }
     }
 
 }

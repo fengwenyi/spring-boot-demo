@@ -22,4 +22,11 @@ public class GoodsEntity extends BaseBizEntity {
 
     private BigDecimal price;
 
+    @Override
+    public String toString() {
+        return "GoodsEntity{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
