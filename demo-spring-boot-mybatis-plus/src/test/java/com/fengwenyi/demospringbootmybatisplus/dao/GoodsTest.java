@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.fengwenyi.demospringbootmybatisplus.DemoSpringBootMyBatisPlusApplicationTests;
 import com.fengwenyi.demospringbootmybatisplus.entity.GoodsEntity;
 import com.fengwenyi.javalib.convert.JsonUtils;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +52,14 @@ public class GoodsTest extends DemoSpringBootMyBatisPlusApplicationTests {
 <==        Row: 1, Redmi K40s, 2199.00, 1, 0, 2022-04-17 22:16:26, null, null, null, null, null
 <==      Total: 1
 */
+    }
+
+    @Test
+    public void pageHelper() {
+        Page<Object> pageRequest = PageHelper.startPage(1, 1);
+        List<GoodsEntity> list = goodsDao.selectList(null);
+        log.info("page: [{}]", pageRequest);
+        log.info("page list: [{}]", JsonUtils.convertString(list));
     }
 
 }
