@@ -68,6 +68,7 @@
         <module>demo-spring-boot-vue3</module>
         <module>demo-spring-boot-native</module>
         <module>demo-spring-boot-pdf</module>
+        <module>demo-spring-boot-id-long</module>
     </modules>
 
     <parent>
