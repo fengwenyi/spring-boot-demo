@@ -9,6 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-spring-boot-jpa-auditing</artifactId>
+    <artifactId>demo-spring-boot-jpa-json</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.vladmihalcea</groupId>
+            <artifactId>hibernate-types-52</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+    </dependencies>
 
 </project>
