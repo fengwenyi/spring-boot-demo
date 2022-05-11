@@ -69,6 +69,7 @@
         <module>demo-spring-boot-native</module>
         <module>demo-spring-boot-pdf</module>
         <module>demo-spring-boot-id-long</module>
+        <module>demo-spring-boot-negotiation</module>
     </modules>
 
     <parent>
