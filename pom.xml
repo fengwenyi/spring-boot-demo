@@ -70,6 +70,7 @@
         <module>demo-spring-boot-pdf</module>
         <module>demo-spring-boot-id-long</module>
         <module>demo-spring-boot-negotiation</module>
+        <module>demo-spring-boot-bean-searcher</module>
     </modules>
 
     <parent>

@@ -6,6 +6,7 @@
 
 - [x] [demo-spring-boot-aop](demo-spring-boot-aop): Spring Boot 集成 AOP 示例
 - [x] [demo-spring-boot-api-result](demo-spring-boot-api-result): Spring Boot 集成 api-result 示例
+
 - [x] [demo-spring-boot-event](demo-spring-boot-event): spring boot event 示例
 - [ ] [demo-spring-boot-hello](demo-spring-boot-hello): spring boot hello
 - [x] [demo-spring-boot-metadata](demo-spring-boot-metadata): Spring Boot Metadata 示例
@@ -44,8 +45,6 @@
 - [ ] [demo-springboot-jpa](./demo-springboot-jpa): Spring Boot 集成 JPA 示例
 - [ ] [demo-springboot-kafka](./demo-springboot-kafka): Spring Boot 集成 Kafka 示例
 - [ ] [demo-springboot-logback](./demo-springboot-logback): Spring Boot 集成 logback 示例
-- [ ] [demo-springboot-mybatis](./demo-springboot-mybatis): Spring Boot 集成 MyBatis 示例
-- [ ] [demo-springboot-mybatis-plus](./demo-springboot-mybatis-plus): Spring Boot 集成 MyBatis-Plus 示例
 - [x] [demo-springboot-netty](./demo-springboot-netty): Spring Boot 集成 Netty 示例
 - [ ] [demo-springboot-oss](./demo-springboot-oss): Spring Boot 集成 OSS 示例
 - [ ] [demo-springboot-poi](./demo-springboot-poi): Spring Boot 集成 POI 示例
@@ -67,6 +66,12 @@
 - [ ] [demo-springboot-upload](./demo-springboot-upload): Spring Boot 文件上传 示例
 - [ ] [demo-springboot-download](./demo-springboot-download): Spring Boot 文件下载 示例
 
+
+## ORM
+
+- [x] [demo-spring-boot-bean-searcher](demo-spring-boot-bean-searcher): Bean Searcher 示例
+- [ ] [demo-springboot-mybatis](./demo-springboot-mybatis): Spring Boot 集成 MyBatis 示例
+- [ ] [demo-springboot-mybatis-plus](./demo-springboot-mybatis-plus): Spring Boot 集成 MyBatis-Plus 示例
 
 
 ## spring data
