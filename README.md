@@ -96,3 +96,7 @@
 
 - [spring framework ordered](https://github.com/spring-projects/spring-framework/blob/main/spring-core/src/main/java/org/springframework/core/Ordered.java)
 
+
+### 存储
+
+- [ ] [spring-boot-minio](demo-spring-boot-minio)：Spring Boot 集成 MinIO 示例
