@@ -27,6 +27,7 @@
 - [ ] [demo-spring-boot-locale](demo-spring-boot-locale): 【2021.12.30】Spring Boot 国际化
 - [ ] [demo-spring-boot-jsonview](demo-spring-boot-jsonview): 【2022.2.8】Spring Boot JsonView 列表和详情字段返回限制
 - [x] [demo-spring-boot-shell](demo-spring-boot-shell): 【2022.2.8】Spring Boot Shell
+- [ ] [demo-spring-boot-bloom-filter](demo-spring-boot-bloom-filter): 【2022.05.31 ~ 】布隆过滤器
   
 
 - [x] [demo-springboot-redis](./demo-springboot-redis): spring boot 集成 redis 示例

@@ -72,6 +72,7 @@
         <module>demo-spring-boot-negotiation</module>
         <module>demo-spring-boot-bean-searcher</module>
         <module>demo-spring-boot-minio</module>
+        <module>demo-spring-boot-bloom-filter</module>
     </modules>
 
     <parent>
