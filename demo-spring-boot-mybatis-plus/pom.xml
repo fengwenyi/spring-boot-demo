@@ -12,7 +12,7 @@
     <artifactId>demo-spring-boot-mybatis-plus</artifactId>
 
     <properties>
-        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
         <api-starter.version>1.2.0</api-starter.version>
         <pagehelper.version>5.3.0</pagehelper.version>
         <pagehelper-starter.version>1.4.2</pagehelper-starter.version>

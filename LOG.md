@@ -1,5 +1,13 @@
 # 更新日志
 
+## 2022.06.06 ~ 2022.06.10
+
+:arrow_up: Dependency Upgrades
+
+- Upgrade to MyBatis Plus 3.5.2
+
+
+
 ## 2022.05.23 ~ 2022.05.27
 
 :bug: Bug Fixes
