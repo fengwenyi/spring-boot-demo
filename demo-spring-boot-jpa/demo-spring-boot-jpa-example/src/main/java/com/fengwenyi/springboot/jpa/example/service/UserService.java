@@ -2,7 +2,7 @@ package com.fengwenyi.springboot.jpa.example.service;
 
 import com.fengwenyi.apistarter.utils.Asserts;
 import com.fengwenyi.springboot.jpa.example.entity.UserEntity;
-import com.fengwenyi.springboot.jpa.example.repository.IUserRepository;
+import com.fengwenyi.springboot.jpa.example.repository.UserRepository;
 import com.fengwenyi.springboot.jpa.example.vo.request.LoginRequestVo;
 import com.fengwenyi.springboot.jpa.example.vo.request.UserQueryRequestVo;
 import org.springframework.data.domain.Example;
@@ -18,9 +18,9 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    private final IUserRepository userRepository;
+    private final UserRepository userRepository;
 
-    public UserService(IUserRepository userRepository) {
+    public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
