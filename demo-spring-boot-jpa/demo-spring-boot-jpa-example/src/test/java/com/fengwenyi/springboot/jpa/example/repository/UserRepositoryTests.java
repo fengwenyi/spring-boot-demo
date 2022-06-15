@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.Sort;
 
 import java.util.List;
@@ -42,6 +43,30 @@ public class UserRepositoryTests extends DemoJpaApplicationTests {
         List<UserEntity> users = userRepository.findAll(example, sort);
 
         log.info(JsonUtils.prettyPrint(users));
+    }
+
+    @Test
+    public void testFindAll() {
+        UserEntity query = new UserEntity();
+//        query.setNickname("%三%"); // 是不能这样写的
+//        query.setNickname("三");
+        query.setUsername("ZHANGSAN");
+        ExampleMatcher matcher = ExampleMatcher.matching()
+                .withMatcher("username", ExampleMatcher.GenericPropertyMatchers.ignoreCase()) // 忽略大小写
+                .withMatcher("nickname", ExampleMatcher.GenericPropertyMatchers.contains())//全部模糊查询，即%{address}%
+                .withIgnorePaths("password") //忽略字段，即不管password是什么值都不加入查询条件
+                ;
+        Example<UserEntity> example = Example.of(query, matcher);
+        List<UserEntity> users = userRepository.findAll(example);
+
+        log.info(JsonUtils.prettyPrint(users));
+
+        /*
+        ExampleMatcher exampleMatcher = ExampleMatcher.matching()
+                .withMatcher("username", ExampleMatcher.GenericPropertyMatchers.startsWith())//模糊查询匹配开头，即{username}%
+                .withMatcher("address" ,ExampleMatcher.GenericPropertyMatchers.contains())//全部模糊查询，即%{address}%
+                .withIgnorePaths("password");//忽略字段，即不管password是什么值都不加入查询条件
+         */
     }
 
 }

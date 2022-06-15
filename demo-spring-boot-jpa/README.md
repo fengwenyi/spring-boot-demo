@@ -60,6 +60,14 @@ public class Event {
 }
 ```
 
+## ExampleMatcher.GenericPropertyMatchers 查询策略
+
+- ExampleMatcher.GenericPropertyMatchers.ignoreCase(): 忽略大小写 lower(userentity0_.username)=?
+- ExampleMatcher.GenericPropertyMatchers.contains() ： 包含，类似 %key%
+- ExampleMatcher.GenericPropertyMatchers.startsWith() : 开头，类似 key%
+- ExampleMatcher.GenericPropertyMatchers.endsWith()
+- withIgnorePaths("password") ：忽略字段，不加入查询条件
+
 ## 疑问
 
 1. findOne 方法如果有多条，会不会报错
