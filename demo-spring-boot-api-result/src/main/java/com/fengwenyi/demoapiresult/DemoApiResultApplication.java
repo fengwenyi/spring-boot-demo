@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootapiresult;
+package com.fengwenyi.demoapiresult;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2021-10-24
  */
 @SpringBootApplication
-public class DemoSpringBootApiResultApplication {
+public class DemoApiResultApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoSpringBootApiResultApplication.class, args);
+        SpringApplication.run(DemoApiResultApplication.class, args);
     }
 
 }
