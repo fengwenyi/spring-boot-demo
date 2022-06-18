@@ -1,5 +1,14 @@
 # 更新日志
 
+## 2022.06.18 ~ 2022.06.19
+
+:star: Features
+
+- api-result 2.7.0-SNAPSHOT demo
+- spring-integration RedisLockRegister demo
+
+
+
 ## 2022.06.06 ~ 2022.06.10
 
 :arrow_up: Dependency Upgrades
