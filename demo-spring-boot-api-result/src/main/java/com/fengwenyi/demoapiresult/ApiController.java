@@ -1,12 +1,15 @@
-package com.fengwenyi.demoapiresult.controller;
+package com.fengwenyi.demoapiresult;
 
 import com.fengwenyi.api.result.PageTemplate;
 import com.fengwenyi.api.result.ResultTemplate;
+import com.fengwenyi.demoapiresult.ResultEnum;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
@@ -41,5 +44,16 @@ public class ApiController {
 
 
         return ResultTemplate.success(pageTemplate);
+    }
+
+    @PostMapping("/login")
+    public ResultTemplate<String> login(String username, String password) {
+        if (!"zhangsan".equals(username)) {
+            return ResultTemplate.fail(ResultEnum.USERNAME_NOT_EXIST);
+        }
+        if (!"123456".equals(password)) {
+            return ResultTemplate.fail(ResultEnum.PASSWORD_INCORRECT);
+        }
+        return ResultTemplate.success(UUID.randomUUID().toString());
     }
 }

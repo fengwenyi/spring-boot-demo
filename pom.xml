@@ -114,6 +114,10 @@
 
     <repositories>
         <repository>
+            <id>maven-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+        <repository>
             <id>aliyun-public</id>
             <url>https://maven.aliyun.com/repository/public</url>
         </repository>
