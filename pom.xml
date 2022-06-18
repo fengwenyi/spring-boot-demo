@@ -73,6 +73,7 @@
         <module>demo-spring-boot-bean-searcher</module>
         <module>demo-spring-boot-minio</module>
         <module>demo-spring-boot-bloom-filter</module>
+        <module>demo-spring-boot-integration</module>
     </modules>
 
     <parent>
