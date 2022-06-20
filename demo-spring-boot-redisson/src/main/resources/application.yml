@@ -1,0 +1,9 @@
+spring:
+  redis:
+    redisson:
+      config: |
+        # 单节点配置
+        singleServerConfig:
+          # 节点地址
+          address: redis://127.0.0.1:6379
+#      file: classpath:redisson.yml
