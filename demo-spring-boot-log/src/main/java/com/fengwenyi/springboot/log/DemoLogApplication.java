@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootlog;
+package com.fengwenyi.springboot.log;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2021-12-20
  */
 @SpringBootApplication
-public class DemoSpringBootLogApplication {
+public class DemoLogApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoSpringBootLogApplication.class, args);
+        SpringApplication.run(DemoLogApplication.class, args);
     }
 
 }

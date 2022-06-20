@@ -39,6 +39,7 @@ public class GoodsRepositoryTest extends DemoSpringBootMyBatisPlusApplicationTes
 
     @Test
     public void page() {
+        Page<?> pageRequest = Page.of(1, 1);
         IPage<GoodsEntity> page = mpGoodsRepository.page(
                 new Page<>(1, 1),
                 null
