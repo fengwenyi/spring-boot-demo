@@ -4,7 +4,11 @@
 
 ## 2022.06.20 ~
 
-- 【redisson】starter demo
+:star: New Features
+
+- 编写 redisson-spring-boot-starter 示例
+- 新建 demo-spring-boot-data，这是一个父级工程，用于编写 spring-data 相关示例
+- 新建 demo-spring-data-jpa 工程
 
 
 

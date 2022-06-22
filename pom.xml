@@ -74,6 +74,7 @@
         <module>demo-spring-boot-minio</module>
         <module>demo-spring-boot-bloom-filter</module>
         <module>demo-spring-boot-integration</module>
+        <module>demo-spring-boot-data</module>
     </modules>
 
     <parent>
