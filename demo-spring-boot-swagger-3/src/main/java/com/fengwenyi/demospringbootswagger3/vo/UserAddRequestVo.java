@@ -11,7 +11,8 @@ import lombok.Data;
 @Data
 public class UserAddRequestVo {
 
-    @Schema(name = "UID")
+    // @Schema(name = "UID")
+    @Schema(type = "String", title = "UID", description = "用户ID", nullable = true)
     private String uid;
 
     @Schema(name = "姓名")

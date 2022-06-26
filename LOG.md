@@ -9,6 +9,7 @@
 - 编写 redisson-spring-boot-starter 示例
 - 新建 demo-spring-boot-data，这是一个父级工程，用于编写 spring-data 相关示例
 - 新建 demo-spring-data-jpa 工程
+- springfox-boot-starter 3.0.0 demo (swagger 2)
 
 
 

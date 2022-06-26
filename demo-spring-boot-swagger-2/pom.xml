@@ -12,7 +12,8 @@
     <artifactId>demo-spring-boot-swagger-2</artifactId>
 
     <properties>
-        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+<!--        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>-->
+        <springfox-swagger2.version>3.0.0</springfox-swagger2.version>
     </properties>
 
     <dependencies>
@@ -34,7 +35,7 @@
         </dependency>
 
         <!-- Swagger -->
-        <dependency>
+        <!--<dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>${springfox-swagger2.version}</version>
@@ -43,6 +44,30 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox-swagger2.version}</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fengwenyi</groupId>
+            <artifactId>api-spring-boot-starter</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fengwenyi</groupId>
+            <artifactId>JavaLib</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
         </dependency>
     </dependencies>
 
