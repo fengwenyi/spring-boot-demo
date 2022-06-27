@@ -69,4 +69,14 @@ public class UserRepositoryTests extends DemoJpaApplicationTests {
          */
     }
 
+    @Test
+    public void testFindAllExample() {
+        UserEntity query = new UserEntity();
+        query.setUsername("zhangsan");
+        Example<UserEntity> example = Example.of(query);
+        List<UserEntity> users = userRepository.findAll(example);
+
+        log.info(JsonUtils.prettyPrint(users));
+    }
+
 }

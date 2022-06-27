@@ -75,6 +75,8 @@
         <module>demo-spring-boot-bloom-filter</module>
         <module>demo-spring-boot-integration</module>
         <module>demo-spring-boot-data</module>
+        <module>demo-spring-boot-fastjson2</module>
+        <module>demo-spring-boot-xml</module>
     </modules>
 
     <parent>
