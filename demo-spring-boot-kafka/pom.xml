@@ -10,10 +10,35 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo-spring-boot-kafka</artifactId>
+    <packaging>pom</packaging>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
+    <modules>
+        <module>demo-kafka-producer</module>
+        <module>demo-kafka-consumer</module>
+        <module>demo-kafka-sdk</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fengwenyi</groupId>
+            <artifactId>JavaLib</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+    </dependencies>
 
 </project>

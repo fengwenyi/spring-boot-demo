@@ -1,0 +1,13 @@
+#spring
+spring:
+  application:
+    name: demo-spring-boot-kafka-producer
+
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092  #bootstrap-servers：连接kafka的地址，多个地址用逗号分隔
+    producer:
+      retries: 0 #若设置大于0的值，客户端会将发送失败的记录重新发送
+      batch-size: 16384 #当将多个记录被发送到同一个分区时， Producer 将尝试将记录组合到更少的请求中。这有助于提升客户端和服务器端的性能。这个配置控制一个批次的默认大小（以字节为单位）。16384是缺省的配置
+      buffer-memory: 33554432 #Producer 用来缓冲等待被发送到服务器的记录的总字节数，33554432是缺省配置
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer #关键字的序列化类
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer #值的序列化类

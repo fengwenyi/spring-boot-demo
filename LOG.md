@@ -12,6 +12,7 @@
 - springfox-boot-starter 3.0.0 demo (swagger 2)
 - 新建 demo-spring-data-fastjson2 工程
 - 新建 demo-spring-data-xml 工程
+- 编写 kafka 示例代码
 
 
 
