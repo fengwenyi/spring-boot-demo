@@ -37,3 +37,4 @@ mvnw.cmd
 mvnw
 
 *.log
+logs
