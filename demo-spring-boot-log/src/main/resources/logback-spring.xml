@@ -3,10 +3,10 @@
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />
 
     <springProperty scope="context" name="springAppName" source="spring.application.name" />
-    <springProperty name="LOG_PATH" source="logging.path" defaultValue="data/log"/>
-    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss:SSS} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr([${springAppName:-}]){yellow} %clr(${PID:- }){magenta} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr([%X{caller},%X{user},%X{method}]){green} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}" />
+    <springProperty name="LOG_PATH" source="logging.path" defaultValue="logs"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss:SSS} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}" />
 
-    <springProperty scope="context" name="FILE_PATTERN" source="log=back.pattern.file" defaultValue="%d{yyyy-MM-dd HH:mm:ss:SSS} ${LOG_LEVEL_PATTERN:-%5p} [${springAppName:-}] ${PID:- } [%15.15t] %-40.40logger{39} [%X{caller},%X{user},%X{method}] : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+    <springProperty scope="context" name="FILE_PATTERN" source="log=back.pattern.file" defaultValue="%d{yyyy-MM-dd HH:mm:ss:SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } [%15.15t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -18,7 +18,12 @@
         </encoder>
     </appender>
 
-    <appender name="flatfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!--日志文件输出的文件名 -->
             <fileNamePattern>${LOG_PATH}/${springAppName}-%d{yyyy-MM-dd}.log
@@ -28,11 +33,14 @@
             <!-- 日志文件大小  -->
             <totalSizeCap>200MB</totalSizeCap>
         </rollingPolicy>
+        <encoder>
+            <pattern>${FILE_PATTERN}</pattern>
+        </encoder>
     </appender>
 
     <root level="INFO">
         <appender-ref ref="console" />
-        <appender-ref ref="flatfile" />
+        <appender-ref ref="file" />
     </root>
 
     <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
