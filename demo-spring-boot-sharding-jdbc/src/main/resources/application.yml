@@ -19,23 +19,65 @@ spring:
 #        username: root
 #        password: 123456
 
-spring.shardingsphere.datasource.names: demo-sharding-ds0,demo-sharding-ds1
+#spring.shardingsphere.datasource.names: demo-sharding-ds0,demo-sharding-ds1
+#
+#spring.shardingsphere.datasource.demo-sharding-ds0.type: org.apache.commons.dbcp2.BasicDataSource
+#spring.shardingsphere.datasource.demo-sharding-ds0.driver-class-name: com.mysql.jdbc.Driver
+#spring.shardingsphere.datasource.demo-sharding-ds0.url: jdbc:mysql://localhost:3306/demo-sharding-ds0
+#spring.shardingsphere.datasource.demo-sharding-ds0.username: root
+#spring.shardingsphere.datasource.demo-sharding-ds0.password: 123456
+#
+#spring.shardingsphere.datasource.demo-sharding-ds1.type: org.apache.commons.dbcp2.BasicDataSource
+#spring.shardingsphere.datasource.demo-sharding-ds1.driver-class-name: com.mysql.jdbc.Driver
+#spring.shardingsphere.datasource.demo-sharding-ds1.url: jdbc:mysql://localhost:3306/demo-sharding-ds1
+#spring.shardingsphere.datasource.demo-sharding-ds1.username: root
+#spring.shardingsphere.datasource.demo-sharding-ds1.password: 123456
+#
+#spring.shardingsphere.sharding.default-database-strategy.inline.sharding-column: user_id
+#spring.shardingsphere.sharding.default-database-strategy.inline.algorithm-expression: demo-sharding-ds$->{user_id % 2}
+#
+#spring.shardingsphere.sharding.tables.t_order.actual-data-nodes: demo-sharding-ds$->{0..1}.t_order
+##spring.shardingsphere.sharding.tables.t_order.table-strategy.inline.sharding-column:
+##spring.shardingsphere.sharding.tables.t_order.table-strategy.inline.algorithm-expression: t_order
 
-spring.shardingsphere.datasource.demo-sharding-ds0.type: org.apache.commons.dbcp2.BasicDataSource
-spring.shardingsphere.datasource.demo-sharding-ds0.driver-class-name: com.mysql.jdbc.Driver
-spring.shardingsphere.datasource.demo-sharding-ds0.url: jdbc:mysql://localhost:3306/demo-sharding-ds0
-spring.shardingsphere.datasource.demo-sharding-ds0.username: root
-spring.shardingsphere.datasource.demo-sharding-ds0.password: 123456
+dataSources:
+  demo-sharding-ds0: !!org.apache.commons.dbcp.BasicDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo-sharding-ds0
+    username: root
+    password: 123456
+  demo-sharding-ds1: !!org.apache.commons.dbcp.BasicDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo-sharding-ds1
+    username: root
+    password: 123456
 
-spring.shardingsphere.datasource.demo-sharding-ds1.type: org.apache.commons.dbcp2.BasicDataSource
-spring.shardingsphere.datasource.demo-sharding-ds1.driver-class-name: com.mysql.jdbc.Driver
-spring.shardingsphere.datasource.demo-sharding-ds1.url: jdbc:mysql://localhost:3306/demo-sharding-ds1
-spring.shardingsphere.datasource.demo-sharding-ds1.username: root
-spring.shardingsphere.datasource.demo-sharding-ds1.password: 123456
+shardingRule:
+  tables:
+    t_order:
+      actualDataNodes: demo-sharding-ds${0..1}.t_order${0..1}
+      databaseStrategy:
+        inline:
+          shardingColumn: user_id
+          algorithmExpression: demo-sharding-ds${user_id % 2}
+      tableStrategy:
+        inline:
+          shardingColumn: order_id
+          algorithmExpression: t_order${order_id % 2}
+      keyGenerator:
+        type: SNOWFLAKE
+        column: order_id
+  bindingTables:
+    - t_order
+  broadcastTables:
+    - t_config
 
-spring.shardingsphere.sharding.default-database-strategy.inline.sharding-column: user_id
-spring.shardingsphere.sharding.default-database-strategy.inline.algorithm-expression: demo-sharding-ds$->{user_id % 2}
+  defaultDataSourceName: demo-sharding-ds0
+  defaultTableStrategy:
+    none:
+  defaultKeyGenerator:
+    type: SNOWFLAKE
+    column: order_id
 
-spring.shardingsphere.sharding.tables.t_order.actual-data-nodes: demo-sharding-ds$->{0..1}.t_order$->{0..1}
-spring.shardingsphere.sharding.tables.t_order.table-strategy.inline.sharding-column: user_id
-spring.shardingsphere.sharding.tables.t_order.table-strategy.inline.algorithm-expression: t_order$->{goods_id % 2}
+props:
+  sql.show: true
