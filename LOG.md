@@ -2,7 +2,7 @@
 
 
 
-## 2022.06.20 ~ 2022.07.01
+## 2022.06.20 ~ 2022.07.02
 
 :star: New Features
 
@@ -15,6 +15,7 @@
 - 编写 kafka 示例代码
 - 编写 demo-spring-boot-sharding-jdbc 分库分表demo
 - 编写 demo-spring-boot-postgres Spring Boot JPA PostgreSQL 
+- 创建 demo-spring-boot-elasticsearch-client 工程
 
 
 
