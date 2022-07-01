@@ -78,6 +78,7 @@
         <module>demo-spring-boot-fastjson2</module>
         <module>demo-spring-boot-xml</module>
         <module>demo-spring-boot-sharding-jdbc</module>
+        <module>demo-spring-boot-postgres</module>
     </modules>
 
     <parent>

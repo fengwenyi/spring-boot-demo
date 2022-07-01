@@ -2,7 +2,7 @@
 
 
 
-## 2022.06.20 ~
+## 2022.06.20 ~ 2022.07.01
 
 :star: New Features
 
@@ -13,6 +13,8 @@
 - 新建 demo-spring-data-fastjson2 工程
 - 新建 demo-spring-data-xml 工程
 - 编写 kafka 示例代码
+- 编写 demo-spring-boot-sharding-jdbc 分库分表demo
+- 编写 demo-spring-boot-postgres Spring Boot JPA PostgreSQL 
 
 
 
