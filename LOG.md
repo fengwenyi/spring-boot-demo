@@ -5,6 +5,7 @@
 :star: New Features
 
 - spring boot admin 2.7.2 demo
+- 新建 spring boot async-http-client 工程
 
 
 ## 2022.06.20 ~ 2022.07.02

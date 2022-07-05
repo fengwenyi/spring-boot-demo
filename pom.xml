@@ -81,6 +81,7 @@
         <module>demo-spring-boot-postgres</module>
         <module>demo-spring-boot-elasticsearch-client</module>
         <module>demo-spring-boot-admin</module>
+        <module>demo-spring-boot-async-http-client</module>
     </modules>
 
     <parent>
