@@ -1,5 +1,10 @@
 # 更新日志
 
+## 2022.07.05 ~ 
+
+:star: New Features
+
+- spring boot admin 2.7.2 demo
 
 
 ## 2022.06.20 ~ 2022.07.02

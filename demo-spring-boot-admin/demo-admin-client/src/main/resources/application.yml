@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: demo-spring-boot-admin-client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8901
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
