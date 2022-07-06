@@ -1,4 +1,3 @@
-
 # api-result
 
 ## test
@@ -14,13 +13,15 @@ Date: Sat, 18 Jun 2022 09:29:55 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
+```json
 {
-"code": "SUCCESS",
-"msg": "Success",
-"success": true,
-"header": null,
-"body": null
+  "code": "SUCCESS",
+  "msg": "Success",
+  "success": true,
+  "header": null,
+  "body": null
 }
+```
 
 ### err msg
 
@@ -33,13 +34,15 @@ Date: Sat, 18 Jun 2022 09:31:35 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
+```json
 {
-"code": "ERROR",
-"msg": "test error!",
-"success": false,
-"header": null,
-"body": null
+  "code": "ERROR",
+  "msg": "test error!",
+  "success": false,
+  "header": null,
+  "body": null
 }
+```
 
 ### page
 
@@ -52,20 +55,22 @@ Date: Sat, 18 Jun 2022 09:32:42 GMT
 Keep-Alive: timeout=60
 Connection: keep-alive
 
+```json
 {
-"code": "SUCCESS",
-"msg": "Success",
-"success": true,
-"header": null,
-"body": {
-"content": [
-"u1",
-"u2",
-"u3"
-],
-"current": 1,
-"pageSize": 10,
-"totalRow": 3,
-"totalPages": 1
+  "code": "SUCCESS",
+  "msg": "Success",
+  "success": true,
+  "header": null,
+  "body": {
+    "content": [
+      "u1",
+      "u2",
+      "u3"
+    ],
+    "current": 1,
+    "pageSize": 10,
+    "totalRow": 3,
+    "totalPages": 1
+  }
 }
-}
+```

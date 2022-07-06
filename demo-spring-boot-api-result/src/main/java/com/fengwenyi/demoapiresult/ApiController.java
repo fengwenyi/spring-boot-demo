@@ -2,7 +2,6 @@ package com.fengwenyi.demoapiresult;
 
 import com.fengwenyi.api.result.PageTemplate;
 import com.fengwenyi.api.result.ResultTemplate;
-import com.fengwenyi.demoapiresult.ResultEnum;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
