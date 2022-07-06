@@ -1,7 +1,7 @@
 package com.fengwenyi.demospringbootmybatisplus.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.fengwenyi.demospringbootmybatisplus.base.BaseBizEntity;
+import com.fengwenyi.apistarter.entity.BaseBizEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;

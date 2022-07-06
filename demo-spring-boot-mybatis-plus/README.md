@@ -67,3 +67,22 @@ SELECT * FROM t_goods WHERE deleted_state=0 AND (name LIKE ?)
 ```mysql
 select * from t_goods t where t.name like concat('%', ?, '%')
 ```
+
+## Json 字段
+
+```java
+@Getter
+@Setter
+@TableName(value = "t_user", autoResultMap = true)
+public class UserEntity extends BaseBizEntity {
+
+    private String username;
+
+    private String password;
+
+    @TableField(typeHandler = JacksonTypeHandler.class)
+    private WalletBo wallet;
+
+}
+```
+
