@@ -2,6 +2,8 @@
 
 spring boot version: 2.7.1
 
+example：demo-spring-boot-example
+
 - [文档](https://www.yuque.com/fengwenyi/spring-boot-demo)
 - [更新日志](LOG.md)
 

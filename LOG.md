@@ -4,6 +4,7 @@
 - 【api-result】更新为2.7.0正式版，优化文档数据展示 (2022.07.06)
 - 【fastjson2】解决 `demo-spring-boot-fastjson` 工程加载不了的问题 (2022.07.06)
 - 【mybatis-plus】mybatis-plus json (2022.07.06)
+- 【example】新建 demo-spring-boot-example 工程 (2022.07.07)
 
 
 ## 2022.07.05 ~ 
