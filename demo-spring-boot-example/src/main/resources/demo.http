@@ -1,0 +1,7 @@
+### POST 参数校验
+POST http://localhost:8080/demo/postParamVerify
+Content-Type: application/json
+
+{
+  "timestamp": 1657157637000
+}
