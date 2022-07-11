@@ -25,6 +25,9 @@ public class LogController {
 
         String ua = request.getHeader("User-Agent");
 
+        // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Safari/605.1.15
+        // Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+
         log.info("ua: [{}]", ua);
 
         log.info("========================");
