@@ -68,6 +68,54 @@ public class Event {
 - ExampleMatcher.GenericPropertyMatchers.endsWith()
 - withIgnorePaths("password") ：忽略字段，不加入查询条件
 
+## JPA 枚举
+
+JPA 枚举有两种方式：
+- 枚举序号或者枚举的名称
+- 使用自定义编码
+
+枚举序号或者枚举的名称
+
+```java
+@Column(name = "gender", nullable = false)
+@Enumerated(EnumType.STRING)
+private GenderEnum gender;
+```
+
+或者
+
+```java
+@Column(name = "gender", nullable = false)
+@Enumerated(EnumType.ORDINAL)
+private GenderEnum gender;
+```
+
+使用自定义编码
+
+需要定义转换器
+
+```java
+public class GenderConverter implements AttributeConverter<GenderEnum, String> {
+    @Override
+    public String convertToDatabaseColumn(GenderEnum genderEnum) {
+        return genderEnum.getCode();
+    }
+
+    @Override
+    public GenderEnum convertToEntityAttribute(String code) {
+        return GenderEnum.of(code);
+    }
+}
+```
+
+使用
+
+```java
+@Column(name = "gender", nullable = false)
+@Convert(converter = GenderConverter.class)
+private GenderEnum gender;
+```
+
 ## 疑问
 
 1. findOne 方法如果有多条，会不会报错

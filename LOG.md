@@ -1,5 +1,6 @@
 # 更新日志
 
+- 【jpa/jpa-example】JPA 枚举 (2022.07.18)
 - 【spring-data】spring-data 2021.2.2 (2022.07.18)
 - 【api-result】结果码支持使用枚举，也可以使用常量 (2022.07.18)
 - 【api-result】api-result 2.7.2 (2022.07.18)

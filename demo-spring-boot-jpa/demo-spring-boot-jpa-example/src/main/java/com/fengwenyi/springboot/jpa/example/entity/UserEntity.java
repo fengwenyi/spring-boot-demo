@@ -1,5 +1,7 @@
 package com.fengwenyi.springboot.jpa.example.entity;
 
+import com.fengwenyi.springboot.jpa.example.entity.converter.GenderConverter;
+import com.fengwenyi.springboot.jpa.example.entity.enums.GenderEnum;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
@@ -48,5 +50,9 @@ public class UserEntity implements Serializable {
     @LastModifiedDate
     @Column(name = "update_time")
     private LocalDateTime updateTime;
+
+    @Column(name = "gender", nullable = false)
+    @Convert(converter = GenderConverter.class)
+    private GenderEnum gender;
 
 }
