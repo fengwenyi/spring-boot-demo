@@ -1,5 +1,7 @@
 # 更新日志
 
+- 【Upgrade】Spring Boot Admin 2.7.3 【2022.07.26】
+- 【Upgrade】spring-boot 2.7.2 【2022.07.26】
 - 【jpa/jpa-example】JPA 枚举 (2022.07.18)
 - 【spring-data】spring-data 2021.2.2 (2022.07.18)
 - 【api-result】结果码支持使用枚举，也可以使用常量 (2022.07.18)
