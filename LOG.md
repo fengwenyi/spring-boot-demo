@@ -1,5 +1,6 @@
 # 更新日志
 
+- 【Upgrade】Spring Shell 2.1.0 【2022.07.28】
 - 【Upgrade】Spring Boot Admin 2.7.3 【2022.07.26】
 - 【Upgrade】spring-boot 2.7.2 【2022.07.26】
 - 【jpa/jpa-example】JPA 枚举 (2022.07.18)
