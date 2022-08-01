@@ -44,6 +44,12 @@
             <artifactId>JavaLib</artifactId>
             <version>2.1.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.78</version>
+        </dependency>
     </dependencies>
 
 </project>
