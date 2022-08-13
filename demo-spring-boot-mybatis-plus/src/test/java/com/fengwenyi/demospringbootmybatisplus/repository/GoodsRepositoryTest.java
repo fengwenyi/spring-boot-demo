@@ -1,6 +1,9 @@
 package com.fengwenyi.demospringbootmybatisplus.repository;
 
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.conditions.update.LambdaUpdateChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fengwenyi.apistarter.constant.EnabledState;
 import com.fengwenyi.demospringbootmybatisplus.DemoSpringBootMyBatisPlusApplicationTests;
@@ -19,7 +22,7 @@ import java.util.List;
  * @author <a href="https://www.fengwenyi.com">Erwin Feng</a>
  * @since 2022-04-28
  */
-@Component
+//@Componentnent
 @Slf4j
 public class GoodsRepositoryTest extends DemoSpringBootMyBatisPlusApplicationTests {
 
@@ -51,6 +54,23 @@ public class GoodsRepositoryTest extends DemoSpringBootMyBatisPlusApplicationTes
     public void list() {
         List<GoodsEntity> list = mpGoodsRepository.list();
         log.info("goods list: [{}]", JsonUtils.convertString(list));
+    }
+
+    @Test
+    public void testUpdateWrapper() {
+        LambdaUpdateWrapper<GoodsEntity> updateWrapper = //new LambdaUpdateWrapper<GoodsEntity>()
+                Wrappers.lambdaUpdate(GoodsEntity.class)
+                .set(GoodsEntity::getEnabledState, false)
+                .set(GoodsEntity::getPrice, 1999)
+                .eq(GoodsEntity::getId, 1)
+                ;
+        //updateWrapper.getSqlSet()
+        log.info("updateWrapper: [{}]", updateWrapper.getSqlSet());
+        mpGoodsRepository.update(updateWrapper);
+//        new LambdaUpdateChainWrapper<>(mpGoodsRepository.getBaseMapper())
+//                .set(GoodsEntity::getEnabledState, true)
+//                .eq(GoodsEntity::getId, 1)
+//                .update();
     }
 
 }
