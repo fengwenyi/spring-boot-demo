@@ -1,0 +1,8 @@
+### 用户-根据ID查询用户接口
+GET http://localhost:8080/user/u1
+
+### 用户-查询用户列表接口
+GET http://localhost:8080/user/list
+
+### 用户-根据ID查询用户名字接口
+GET http://localhost:8080/user/name?id=u1
