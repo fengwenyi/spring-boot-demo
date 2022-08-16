@@ -8,7 +8,7 @@ import java.util.List;
  * @author <a href="https://fengwenyi.com">Erwin Feng</a>
  * @since 2022-08-15
  */
-public interface IMethodCacheService {
+public interface IUserService {
 
     UserModel queryUser(String id);
 

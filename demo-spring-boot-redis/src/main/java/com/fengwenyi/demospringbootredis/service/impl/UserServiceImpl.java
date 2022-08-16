@@ -1,7 +1,7 @@
 package com.fengwenyi.demospringbootredis.service.impl;
 
 import com.fengwenyi.demospringbootredis.model.UserModel;
-import com.fengwenyi.demospringbootredis.service.IMethodCacheService;
+import com.fengwenyi.demospringbootredis.service.IUserService;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.List;
  * @since 2022-08-15
  */
 @Service
-public class MethodCacheServiceImpl implements IMethodCacheService {
+public class UserServiceImpl implements IUserService {
     @Override
     @Cacheable(value = "user", key = "'id_'+#id")
     public UserModel queryUser(String id) {

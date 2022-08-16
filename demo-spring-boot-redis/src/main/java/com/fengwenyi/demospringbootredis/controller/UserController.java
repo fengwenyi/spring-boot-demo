@@ -1,7 +1,7 @@
 package com.fengwenyi.demospringbootredis.controller;
 
 import com.fengwenyi.demospringbootredis.model.UserModel;
-import com.fengwenyi.demospringbootredis.service.IMethodCacheService;
+import com.fengwenyi.demospringbootredis.service.IUserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,25 +17,25 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
-    private final IMethodCacheService methodCacheService;
+    private final IUserService userService;
 
-    public UserController(IMethodCacheService methodCacheService) {
-        this.methodCacheService = methodCacheService;
+    public UserController(IUserService userService) {
+        this.userService = userService;
     }
 
     @GetMapping("/{id}")
     public UserModel get(@PathVariable String id) {
-        return methodCacheService.queryUser(id);
+        return userService.queryUser(id);
     }
 
     @GetMapping("/list")
     public List<UserModel> getList() {
-        return methodCacheService.queryUserList();
+        return userService.queryUserList();
     }
 
     @GetMapping("/name")
     public String getName(String id) {
-        return methodCacheService.queryUserName(id);
+        return userService.queryUserName(id);
     }
 
 }
