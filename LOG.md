@@ -1,5 +1,6 @@
 # 更新日志
 
+- 【rabbitmq】demo 【2022.08.20】
 - 【completable-future】task demo 【2022.08.19】
 - 【Upgrade】Spring Shell 2.1.0 【2022.07.28】
 - 【Upgrade】Spring Boot Admin 2.7.3 【2022.07.26】

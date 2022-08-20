@@ -1,0 +1,2 @@
+### 发送消息
+GET http://localhost:8080/sendMsg?key=item.test&msg=Hello
