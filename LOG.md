@@ -1,5 +1,6 @@
 # 更新日志
 
+- 【rabbitmq】延迟队列 demo 【2022.08.21】
 - 【upgrade】spring boot 2.7.3 【2022.08.21】
 - 【rabbitmq】demo 【2022.08.20】
 - 【completable-future】task demo 【2022.08.19】

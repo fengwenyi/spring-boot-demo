@@ -5,4 +5,4 @@ spring:
     username: admin
     password: admin
     # 需要注意这个
-    virtual-host: my_vhost
+#    virtual-host: my_vhost
