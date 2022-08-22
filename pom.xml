@@ -84,6 +84,7 @@
         <module>demo-spring-boot-async-http-client</module>
         <module>demo-spring-boot-example</module>
         <module>demo-spring-boot-completable-future</module>
+        <module>demo-spring-boot-util</module>
     </modules>
 
     <parent>
