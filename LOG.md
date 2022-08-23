@@ -1,5 +1,6 @@
 # 更新日志
 
+- 【log】方法耗时监控，支持 el 表达式【2022.08.23】
 - 【util】StopWatch【2022.08.22】
 - 【completable-future】thread pool【2022.08.22】
 - 【log】日志文件指定，级别调整 【2022.08.21】
