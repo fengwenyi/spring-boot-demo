@@ -1,13 +1,15 @@
-package com.fengwenyi.springboot.log;
+package com.fengwenyi.springboot.log.controller;
 
+import com.fengwenyi.springboot.log.annotation.TakeTime;
+import com.fengwenyi.springboot.log.model.User;
 import eu.bitwalker.useragentutils.Browser;
 import eu.bitwalker.useragentutils.OperatingSystem;
 import eu.bitwalker.useragentutils.UserAgent;
 import eu.bitwalker.useragentutils.Version;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sun.management.resources.agent;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -56,6 +58,28 @@ public class LogController {
         OperatingSystem os = userAgent.getOperatingSystem();
         log.info("名称：" + os.getName() + "\n设备类型：" + os.getDeviceType() + "\n产品系列：" + os.getGroup() + "\n生成厂商："
                 + os.getManufacturer());
+        return "success";
+    }
+
+    @GetMapping("/task1")
+    @TakeTime(logKey = "task1", bizId = "#id")
+    public String task1(String id) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return "success";
+    }
+
+    @GetMapping("/task2")
+    @TakeTime(logKey = "task2", bizId = "#user.id")
+    public String task2(User user) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return "success";
     }
 
