@@ -1,6 +1,7 @@
 package com.fengwenyi.demospringbootredis.service;
 
 import com.fengwenyi.demospringbootredis.model.UserModel;
+import com.fengwenyi.demospringbootredis.model.UserSimple;
 
 import java.util.List;
 
@@ -16,4 +17,5 @@ public interface IUserService {
 
     String queryUserName(String id);
 
+    List<UserSimple> queryUserSimpleList(List<String> ids);
 }

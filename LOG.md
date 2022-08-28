@@ -1,5 +1,6 @@
 # 更新日志
 
+- 【redis】stringRedisTemplate.opsForHash().multiGet 【2022.08.28】
 - 【example】test receive form param 【2022.08.28】
 - 【log】方法耗时监控，支持 el 表达式【2022.08.23】
 - 【util】StopWatch【2022.08.22】
