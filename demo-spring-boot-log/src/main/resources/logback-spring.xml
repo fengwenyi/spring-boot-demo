@@ -20,7 +20,7 @@
 
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
-            <level>INFO</level>
+            <level>DEBUG</level>
             <onMatch>ACCEPT</onMatch>
             <onMismatch>DENY</onMismatch>
         </filter>
@@ -38,7 +38,7 @@
         </encoder>
     </appender>
 
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="console" />
         <appender-ref ref="file" />
     </root>

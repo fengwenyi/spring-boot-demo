@@ -1,3 +1,14 @@
 spring:
   application:
     name: demo-spring-boot-log
+
+logging:
+  file:
+    path: classpath:/logback-spring.xml
+  level:
+    root: info
+    com:
+      fengwenyi:
+        springboot:
+          log: debug
+          mapper: info
