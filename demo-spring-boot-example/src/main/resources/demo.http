@@ -5,3 +5,7 @@ Content-Type: application/json
 {
   "timestamp": 1657157637000
 }
+
+### form param
+
+POST http://localhost:8080/demo/formParam?id=1&name=zhangsan&age=18

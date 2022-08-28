@@ -17,7 +17,7 @@ import java.io.IOException;
  * @author <a href="https://fengwenyi.com">Erwin Feng</a>
  * @since 2022-08-01
  */
-@Configuration
+//@Configuration
 public class JacksonConfig {
 
     @Bean
