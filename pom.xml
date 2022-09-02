@@ -85,6 +85,7 @@
         <module>demo-spring-boot-example</module>
         <module>demo-spring-boot-completable-future</module>
         <module>demo-spring-boot-util</module>
+        <module>demo-spring-boot-rest-template</module>
     </modules>
 
     <parent>
