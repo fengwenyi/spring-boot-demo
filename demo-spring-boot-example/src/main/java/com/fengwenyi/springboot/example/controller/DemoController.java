@@ -2,6 +2,7 @@ package com.fengwenyi.springboot.example.controller;
 
 import com.fengwenyi.api.result.ResultTemplate;
 import com.fengwenyi.javalib.convert.JsonUtils;
+import com.fengwenyi.springboot.example.annotation.BizLock;
 import com.fengwenyi.springboot.example.vo.request.FormParamRequestVo;
 import com.fengwenyi.springboot.example.vo.request.PostParamVerifyRequestVo;
 import com.fengwenyi.springboot.example.vo.response.StringNull2BlankResponseVo;
@@ -19,7 +20,11 @@ import org.springframework.web.bind.annotation.*;
 public class DemoController {
 
     @PostMapping("/postParamVerify")
+    @BizLock
     public ResultTemplate<Void> postParamVerify(@RequestBody @Validated PostParamVerifyRequestVo requestVo) {
+
+        log.info(JsonUtils.convertString(requestVo));
+
         return ResultTemplate.success();
     }
 

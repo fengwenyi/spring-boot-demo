@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 @Data
 public class PostParamVerifyRequestVo {
 
+    private String id;
+
     @NotNull(message = "时间戳不能为空")
     @ValidTimestamp(message = "时间戳不合法", past = true)
     private Long timestamp;
