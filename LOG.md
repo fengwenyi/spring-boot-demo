@@ -1,5 +1,7 @@
 # 更新日志
 
+- 【rest-template】create 【2022.09.03】
+- 【example】接口限流测试 【2022.09.02】
 - 【redis】stringRedisTemplate.opsForHash().multiGet 【2022.08.28】
 - 【example】test receive form param 【2022.08.28】
 - 【log】方法耗时监控，支持 el 表达式【2022.08.23】
