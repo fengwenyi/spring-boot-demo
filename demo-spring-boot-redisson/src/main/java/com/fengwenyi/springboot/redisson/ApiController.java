@@ -81,8 +81,9 @@ public class ApiController {
     }
 
     @RequestMapping("/testLock2")
-    public String testLock2() {
-        String traceId = IdUtils.genId();
+    public String testLock2(String id) {
+//        String traceId = IdUtils.genId();
+        String traceId = id;
         log.info("{}, request enter", traceId);
         RLock lock = redissonClient.getLock("lock");
         if (Objects.isNull(lock)) {
@@ -94,35 +95,40 @@ public class ApiController {
 
         boolean tryLock;
         try {
-            tryLock = lock.tryLock(6, TimeUnit.SECONDS);
+//            tryLock = lock.tryLock(30, TimeUnit.SECONDS);
+            tryLock = lock.tryLock(0, 5, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             log.error("{}, lock exception", traceId);
             return "lock exception";
         }
 
-        if (tryLock) {
-            try {
-                TimeUnit.SECONDS.sleep(10);
-                log.info("{}, business success", traceId);
-                return "success";
-            } catch (Exception e) {
-                log.error("{}, business error", traceId);
-                return "failed";
-            } finally {
-                if (lock.isLocked()) {
-                    lock.unlock();
-                }
-            }
-        } else {
+//        tryLock = lock.tryLock();
+
+        if (!tryLock) {
             log.error("{}, try lock failed", traceId);
+            return "exception";
         }
 
-        return "exception";
+        log.info("{}, get lock success", traceId);
+
+        try {
+            TimeUnit.SECONDS.sleep(20);
+            log.info("{}, business success", traceId);
+            return "success";
+        } catch (Exception e) {
+            log.error("{}, business error", traceId);
+            return "failed";
+        } finally {
+            if (lock.isLocked()) {
+                lock.unlock();
+            }
+        }
     }
 
     @RequestMapping("/testLock3")
-    public String testLock3() {
-        String traceId = IdUtils.genId();
+    public String testLock3(String id) {
+//        String traceId = IdUtils.genId();
+        String traceId = id;
         log.info("{}, request enter", traceId);
         RLock lock = redissonClient.getLock("lock");
         if (Objects.isNull(lock)) {
@@ -132,17 +138,21 @@ public class ApiController {
 
         log.info("{}, get lock", traceId);
 
-        lock.lock(10, TimeUnit.SECONDS);
+        lock.lock();
+//        lock.lock(5, TimeUnit.SECONDS);
+        // lock.lock
+
+        log.info("{}, get lock success", traceId);
 
         try {
-            TimeUnit.SECONDS.sleep(5);
+            TimeUnit.SECONDS.sleep(20);
             log.info("{}, business success", traceId);
             return "success";
         } catch (Exception e) {
             log.error("{}, business error", traceId);
             return "failed";
         } finally {
-            if (lock.isLocked()) {
+            if (lock.isLocked() && lock.isHeldByCurrentThread()) {
                 lock.unlock();
             }
         }
