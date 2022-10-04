@@ -96,7 +96,7 @@ public class ApiController {
         boolean tryLock;
         try {
 //            tryLock = lock.tryLock(30, TimeUnit.SECONDS);
-            tryLock = lock.tryLock(0, 5, TimeUnit.SECONDS);
+            tryLock = lock.tryLock(3, 5, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             log.error("{}, lock exception", traceId);
             return "lock exception";
@@ -122,6 +122,10 @@ public class ApiController {
             if (lock.isLocked()) {
                 lock.unlock();
             }
+//            lock.unlock();
+            /*
+            java.lang.IllegalMonitorStateException: attempt to unlock lock, not locked by current thread by node id: 526bb8c9-c033-4aa5-b977-a9e7163da9bf thread-id: 61
+             */
         }
     }
 
@@ -138,8 +142,8 @@ public class ApiController {
 
         log.info("{}, get lock", traceId);
 
-        lock.lock();
-//        lock.lock(5, TimeUnit.SECONDS);
+//        lock.lock();
+        lock.lock(5, TimeUnit.SECONDS);
         // lock.lock
 
         log.info("{}, get lock success", traceId);
@@ -152,7 +156,11 @@ public class ApiController {
             log.error("{}, business error", traceId);
             return "failed";
         } finally {
-            if (lock.isLocked() && lock.isHeldByCurrentThread()) {
+//            if (lock.isLocked() && lock.isHeldByCurrentThread()) {
+//                lock.unlock();
+//            }
+//            lock.unlock(); // error
+            if (lock.isLocked()) {
                 lock.unlock();
             }
         }
