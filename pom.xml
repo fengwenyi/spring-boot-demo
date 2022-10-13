@@ -86,12 +86,13 @@
         <module>demo-spring-boot-completable-future</module>
         <module>demo-spring-boot-util</module>
         <module>demo-spring-boot-rest-template</module>
+        <module>demo-spring-authorization-server</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.3</version>
+        <version>2.7.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -104,7 +105,8 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-boot.version>2.7.3</spring-boot.version>
+        <spring-boot.version>2.7.4</spring-boot.version>
+        <spring-authorization-server.version>0.3.1</spring-authorization-server.version>
     </properties>
 
     <build>

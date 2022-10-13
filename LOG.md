@@ -1,5 +1,7 @@
 # 更新日志
 
+- 【upgrade】spring boot 2.7.4 【2022.10.13】
+- 【spring-authorization-server】create 【2022.10.13】
 - 【rest-template】create 【2022.09.03】
 - 【example】接口限流测试 【2022.09.02】
 - 【redis】stringRedisTemplate.opsForHash().multiGet 【2022.08.28】
