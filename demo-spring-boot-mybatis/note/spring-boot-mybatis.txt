@@ -1,17 +1,21 @@
 
 启动：
 
+没有 加注解 org.mybatis.spring.annotation.MapperScan 时的流程：
+
 org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
     - org.mybatis.spring.boot.autoconfigure.MybatisProperties
     -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.AutoConfiguredMapperScannerRegistrar.registerBeanDefinitions
+        - builder.addPropertyValue("annotationClass", Mapper.class);
         -> org.mybatis.spring.mapper.MapperScannerConfigurer.postProcessBeanDefinitionRegistry
+            -> org.mybatis.spring.mapper.MapperScannerConfigurer.processPropertyPlaceHolders
             -> org.mybatis.spring.mapper.ClassPathMapperScanner.ClassPathMapperScanner
                 -> org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.registerDefaultFilters
             -> org.mybatis.spring.mapper.ClassPathMapperScanner.registerFilters *
             -> org.springframework.context.annotation.ClassPathBeanDefinitionScanner.scan
-                -> org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan (被覆盖了)
                 -> org.mybatis.spring.mapper.ClassPathMapperScanner.doScan (覆盖)
-                    -> org.mybatis.spring.mapper.ClassPathMapperScanner.processBeanDefinitions
+                    -> org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan
+                        -> org.mybatis.spring.mapper.ClassPathMapperScanner.processBeanDefinitions [*]
 
     -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.MybatisAutoConfiguration
     -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration#afterPropertiesSet
@@ -37,3 +41,16 @@ org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
 
                     this.sqlSessionProxy = (SqlSession) newProxyInstance(SqlSessionFactory.class.getClassLoader(),
                     new Class[] { SqlSession.class }, new SqlSessionInterceptor());
+
+
+加了 org.mybatis.spring.annotation.MapperScan 流程：
+
+-> org.mybatis.spring.annotation.MapperScan
+    -> org.mybatis.spring.annotation.MapperScannerRegistrar
+        -> org.mybatis.spring.annotation.MapperScannerRegistrar.registerBeanDefinitions(org.springframework.core.type.AnnotationMetadata, org.springframework.beans.factory.support.BeanDefinitionRegistry)
+            -> org.mybatis.spring.annotation.MapperScannerRegistrar.generateBaseBeanName
+            -> org.mybatis.spring.annotation.MapperScannerRegistrar.registerBeanDefinitions(org.springframework.core.type.AnnotationMetadata, org.springframework.core.annotation.AnnotationAttributes, org.springframework.beans.factory.support.BeanDefinitionRegistry, java.lang.String)
+                - BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(MapperScannerConfigurer.class);
+                -> org.mybatis.spring.mapper.MapperScannerConfigurer.postProcessBeanDefinitionRegistry
+
+-> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.MybatisAutoConfiguration

@@ -9,7 +9,7 @@ import java.util.List;
  * @author <a href="https://fengwenyi.com">Erwin Feng</a>
  * @since 2022-10-24
  */
-@Mapper
+//@Mapper
 public interface UserMapper {
 
     int save(UserEntity user);
