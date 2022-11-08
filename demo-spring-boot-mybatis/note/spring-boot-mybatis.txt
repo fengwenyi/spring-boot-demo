@@ -16,15 +16,21 @@ org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
                 -> org.mybatis.spring.mapper.ClassPathMapperScanner.doScan (覆盖)
                     -> org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan
                         -> org.mybatis.spring.mapper.ClassPathMapperScanner.processBeanDefinitions [*]
+                -> org.springframework.context.annotation.AnnotationConfigUtils.registerAnnotationConfigProcessors(org.springframework.beans.factory.support.BeanDefinitionRegistry, java.lang.Object)
 
     -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.MybatisAutoConfiguration
     -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration#afterPropertiesSet
         -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.checkConfigFileExists
     -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration#sqlSessionFactory
         -> org.mybatis.spring.SqlSessionFactoryBean
-        -> org.mybatis.spring.SqlSessionFactoryBean#getObject
+        -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.applyConfiguration
+        -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.applySqlSessionFactoryBeanCustomizers
+        -> org.mybatis.spring.SqlSessionFactoryBean#getObject [*]
             -> org.mybatis.spring.SqlSessionFactoryBean#afterPropertiesSet
                 -> org.mybatis.spring.SqlSessionFactoryBean#buildSqlSessionFactory
+                    - org.apache.ibatis.session.Configuration
+                    -> org.mybatis.spring.SqlSessionFactoryBean.scanClasses
+                    - mapperLocations
                     -> org.apache.ibatis.builder.xml.XMLMapperBuilder#XMLMapperBuilder(java.io.InputStream, org.apache.ibatis.session.Configuration, java.lang.String, java.util.Map<java.lang.String,org.apache.ibatis.parsing.XNode>)
                     -> org.apache.ibatis.builder.xml.XMLMapperBuilder#parse
                         -> org.apache.ibatis.builder.xml.XMLMapperBuilder#bindMapperForNamespace
@@ -33,6 +39,7 @@ org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
                         -> org.apache.ibatis.builder.xml.XMLMapperBuilder#parsePendingStatements
                             -> org.apache.ibatis.builder.xml.XMLMapperBuilder.parsePendingStatements
                                 -> org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode
+                    -> org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.DefaultSqlSessionFactory
     -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration#sqlSessionTemplate
         - org.apache.ibatis.session.ExecutorType
         -> org.mybatis.spring.SqlSessionTemplate#SqlSessionTemplate(org.apache.ibatis.session.SqlSessionFactory)
@@ -42,6 +49,11 @@ org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
                     this.sqlSessionProxy = (SqlSession) newProxyInstance(SqlSessionFactory.class.getClassLoader(),
                     new Class[] { SqlSession.class }, new SqlSessionInterceptor());
 
+                    -> org.mybatis.spring.SqlSessionTemplate.SqlSessionInterceptor
+                        -> org.mybatis.spring.SqlSessionUtils.getSqlSession(org.apache.ibatis.session.SqlSessionFactory, org.apache.ibatis.session.ExecutorType, org.springframework.dao.support.PersistenceExceptionTranslator)
+                        -> org.mybatis.spring.SqlSessionUtils.closeSqlSession
+
+                    -> org.mybatis.spring.support.SqlSessionDaoSupport.setSqlSessionFactory
 
 加了 org.mybatis.spring.annotation.MapperScan 流程：
 
