@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo-spring-boot-dynamic
+
+  dynamic:
+    tp:
+      enabled: true
+      enabledBanner: true           # 是否开启banner打印，默认true
+      nacos:                        # nacos配置，不配置有默认值（规则appname-dev.yml这样），cloud应用不需要配置
+        dataId: ${spring.application.name}
+        group: DEFAULT_GROUP
+        namespace: demo-spring-boot
+
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+    auto-refresh: true
+    data-id: ${spring.application.name}
+    namespace: demo-spring-boot

@@ -88,6 +88,7 @@
         <module>demo-spring-boot-rest-template</module>
         <module>demo-spring-authorization-server</module>
         <module>demo-spring-boot-mybatis-plus-p6spy</module>
+        <module>demo-spring-boot-dynamic-tp</module>
     </modules>
 
     <parent>
