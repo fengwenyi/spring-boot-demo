@@ -17,16 +17,21 @@ import java.util.concurrent.ThreadPoolExecutor;
 @RequestMapping("/test")
 public class TestController {
 
-//    @Resource
-//    private ThreadPoolExecutor dtpExecutor1;
+    @Resource
+    private ThreadPoolExecutor dtpExecutor1;
 
     @GetMapping("/task")
     public String task() {
 //        dtpExecutor1.execute(() -> System.out.println("test"));
-//        System.out.println(dtpExecutor1.getCorePoolSize());
-        DtpExecutor dtpExecutor = DtpRegistry.getDtpExecutor("dtpExecutor1");
-        dtpExecutor.execute(() -> System.out.println("test"));
+        System.out.println(dtpExecutor1.getCorePoolSize());
+        dtpExecutor1.setCorePoolSize(10);
+        System.out.println(dtpExecutor1.getCorePoolSize());
+//        DtpExecutor dtpExecutor = DtpRegistry.getDtpExecutor("dtpExecutor1");
+//        dtpExecutor.execute(() -> System.out.println("test"));
         return "success";
+
+
+
     }
 
 }

@@ -19,7 +19,7 @@ public class ThreadPoolConfig {
      *
      * @return 线程池实例
      */
-//    @Bean
+    @Bean
     public DtpExecutor dtpExecutor1() {
         return ThreadPoolCreator.createDynamicFast("dtpExecutor1");
     }
