@@ -66,3 +66,37 @@ org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
                 -> org.mybatis.spring.mapper.MapperScannerConfigurer.postProcessBeanDefinitionRegistry
 
 -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.MybatisAutoConfiguration
+
+
+查询流程：
+
+-> com.fengwenyi.springboot.mybatis.mapper.UserMapper.queryAll
+    -> org.mybatis.spring.SqlSessionTemplate.SqlSessionInterceptor.invoke
+        -> org.mybatis.spring.SqlSessionUtils.getSqlSession(org.apache.ibatis.session.SqlSessionFactory, org.apache.ibatis.session.ExecutorType, org.springframework.dao.support.PersistenceExceptionTranslator)
+
+        -> java.lang.reflect.Method.invoke
+            -> org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(java.lang.String, java.lang.Object)
+                -> org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(java.lang.String, java.lang.Object, org.apache.ibatis.session.RowBounds)
+                    -> org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(java.lang.String, java.lang.Object, org.apache.ibatis.session.RowBounds, org.apache.ibatis.session.ResultHandler)
+                        -> org.apache.ibatis.session.Configuration.getMappedStatement(java.lang.String)
+                            -> org.apache.ibatis.session.Configuration.getMappedStatement(java.lang.String, boolean)
+                                -> org.apache.ibatis.session.Configuration.buildAllStatements
+                                    -> org.apache.ibatis.session.Configuration.parsePendingResultMaps
+                        -> org.apache.ibatis.session.defaults.DefaultSqlSession.
+                        -> org.apache.ibatis.executor.Executor.query(org.apache.ibatis.mapping.MappedStatement, java.lang.Object, org.apache.ibatis.session.RowBounds, org.apache.ibatis.session.ResultHandler)
+                            -> org.apache.ibatis.executor.CachingExecutor.query(org.apache.ibatis.mapping.MappedStatement, java.lang.Object, org.apache.ibatis.session.RowBounds, org.apache.ibatis.session.ResultHandler)
+                                -> org.apache.ibatis.mapping.MappedStatement.getBoundSql
+                                -> org.apache.ibatis.executor.CachingExecutor.createCacheKey
+                                -> org.apache.ibatis.executor.CachingExecutor.query(org.apache.ibatis.mapping.MappedStatement, java.lang.Object, org.apache.ibatis.session.RowBounds, org.apache.ibatis.session.ResultHandler, org.apache.ibatis.cache.CacheKey, org.apache.ibatis.mapping.BoundSql)
+                                    -> org.apache.ibatis.mapping.MappedStatement.getCache
+                                    -> org.apache.ibatis.executor.Executor.query(org.apache.ibatis.mapping.MappedStatement, java.lang.Object, org.apache.ibatis.session.RowBounds, org.apache.ibatis.session.ResultHandler, org.apache.ibatis.cache.CacheKey, org.apache.ibatis.mapping.BoundSql)
+                                        -> org.apache.ibatis.executor.BaseExecutor.queryFromDatabase
+                                            -> org.apache.ibatis.executor.BaseExecutor.doQuery
+                                                -> org.apache.ibatis.mapping.MappedStatement.getConfiguration
+                                                -> org.apache.ibatis.session.Configuration.newStatementHandler
+                                                -> org.apache.ibatis.executor.SimpleExecutor.prepareStatement
+                                                -> org.apache.ibatis.executor.statement.StatementHandler.query
+                                                    -> org.apache.ibatis.executor.statement.StatementHandler.
+                                                    -> org.apache.ibatis.executor.statement.PreparedStatementHandler.query
+                                                        -> java.sql.PreparedStatement.execute
+                                                        -> org.apache.ibatis.executor.resultset.ResultSetHandler.handleResultSets
