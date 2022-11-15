@@ -1,6 +1,7 @@
 package com.fengwenyi.springboot.mybatis.mapper;
 
 import com.fengwenyi.springboot.mybatis.entity.UserEntity;
+import com.fengwenyi.springboot.mybatis.model.PageModel;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -16,4 +17,5 @@ public interface UserMapper {
 
     List<UserEntity> queryAll();
 
+    List<UserEntity> pageByInterceptor(PageModel pageModel);
 }

@@ -23,4 +23,8 @@
     <select id="queryAll" resultMap="BaseResultMap">
         select * from t_user
     </select>
+
+    <select id="pageByInterceptor" resultMap="BaseResultMap">
+        select * from t_user
+    </select>
 </mapper>

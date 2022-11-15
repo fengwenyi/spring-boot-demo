@@ -3,6 +3,7 @@ package com.fengwenyi.springboot.mybatis.mapper;
 import com.fengwenyi.javalib.convert.JsonUtils;
 import com.fengwenyi.springboot.mybatis.MyBatisApplicationTests;
 import com.fengwenyi.springboot.mybatis.entity.UserEntity;
+import com.fengwenyi.springboot.mybatis.model.PageModel;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -27,5 +28,14 @@ public class UserMapperTests extends MyBatisApplicationTests {
     public void testQueryAll() {
         List<UserEntity> userEntityList = userMapper.queryAll();
         System.out.println(JsonUtils.convertString(userEntityList));;
+    }
+
+    @Test
+    public void testPage() {
+        PageModel pageModel = new PageModel();
+        pageModel.setCurrent(1L);
+        pageModel.setPageSize(10);
+        List<UserEntity> userEntityList = userMapper.pageByInterceptor(pageModel);
+        System.out.println(JsonUtils.convertString(userEntityList));
     }
 }
