@@ -43,6 +43,12 @@
             <artifactId>JavaLib</artifactId>
             <version>2.2.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fengwenyi</groupId>
+            <artifactId>api-result</artifactId>
+            <version>2.7.4</version>
+        </dependency>
     </dependencies>
 
 </project>
