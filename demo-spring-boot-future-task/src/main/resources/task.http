@@ -1,4 +1,0 @@
-GET localhost:8080/test/http
-
-###
-GET localhost:8080/test/http2

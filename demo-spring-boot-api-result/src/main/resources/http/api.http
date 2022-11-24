@@ -1,8 +1,0 @@
-### demo
-POST http://localhost:8080/api/demo
-
-### err-msg
-POST http://localhost:8080/api/err-msg
-
-### page
-POST http://localhost:8080/api/page-response

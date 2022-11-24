@@ -1,6 +1,0 @@
-### 发送消息
-GET http://localhost:8080/sendMsg?key=item.test&msg=Hello
-
-
-### 发送延迟队列消息
-GET http://localhost:8080/sendDelayMsg/10000/iPhone13

@@ -1,5 +1,0 @@
-server:
-  port: 9103
-
-#cxf:
-#  path: /ws
