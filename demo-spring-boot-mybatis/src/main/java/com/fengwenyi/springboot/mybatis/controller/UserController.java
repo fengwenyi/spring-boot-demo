@@ -4,6 +4,7 @@ import com.fengwenyi.api.result.ListTemplate;
 import com.fengwenyi.api.result.ResultTemplate;
 import com.fengwenyi.springboot.mybatis.entity.UserEntity;
 import com.fengwenyi.springboot.mybatis.mapper.IUserMapper;
+import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,11 +19,12 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
-    private final IUserMapper userMapper;
+    @Resource
+    private IUserMapper userMapper;
 
-    public UserController(IUserMapper userMapper) {
-        this.userMapper = userMapper;
-    }
+//    public UserController(IUserMapper userMapper) {
+//        this.userMapper = userMapper;
+//    }
 
     @GetMapping("/all")
     public ResultTemplate<ListTemplate<UserEntity>> getAll() {

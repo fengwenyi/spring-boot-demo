@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo-spring-boot-mybatis
     username: root
     password: 123456
-    url: jdbc:mysql://localhost:3306/demo_mybatis
 
 mybatis:
   type-aliases-package: com.fengwenyi.springboot.mybatis.entity
