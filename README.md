@@ -3,10 +3,12 @@
 spring boot version: 3.0.0
 
 ## 项目说明
-| 项目                       | 描述             | 构建时间       | 更新时间 |
-|--------------------------|----------------|------------|------|
-| demo-spring-boot-hello   | 快速开始           | 2022-11-25 |      |
-| demo-spring-boot-example | spring boot 示例 | 2022-11-25 |      |
+| 项目                            | 描述                             | 构建时间       | 更新时间 |
+|-------------------------------|--------------------------------|------------|------|
+| demo-spring-boot-hello        | 快速开始                           | 2022-11-25 |      |
+| demo-spring-boot-example      | spring boot 示例                 | 2022-11-25 |      |
+| demo-spring-boot-mybatis      | spring boot 整合 MyBatis 示例      | 2022-11-25 |      |
+| demo-spring-boot-mybatis-plus | spring boot 整合 MyBatis-Plus 示例 | 2022-11-28 |      |
 
 
 
