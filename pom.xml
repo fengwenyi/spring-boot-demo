@@ -89,6 +89,7 @@
         <module>demo-spring-authorization-server</module>
         <module>demo-spring-boot-mybatis-plus-p6spy</module>
         <module>demo-spring-boot-dynamic-tp</module>
+        <module>demo-spring-boot-knife4j</module>
     </modules>
 
     <parent>
