@@ -106,3 +106,15 @@ org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
                                                     -> org.apache.ibatis.executor.statement.PreparedStatementHandler.query
                                                         -> java.sql.PreparedStatement.execute
                                                         -> org.apache.ibatis.executor.resultset.ResultSetHandler.handleResultSets
+
+
+新增流程：
+-> org.apache.ibatis.binding.MapperProxy.invoke
+    -> org.apache.ibatis.binding.MapperProxy.PlainMethodInvoker.invoke
+        -> org.apache.ibatis.binding.MapperMethod.execute
+            - command: INSERT
+            -> org.mybatis.spring.SqlSessionTemplate.insert(java.lang.String, java.lang.Object)
+                -> org.mybatis.spring.SqlSessionTemplate.SqlSessionInterceptor.invoke
+                    -> org.mybatis.spring.SqlSessionUtils.getSqlSession(org.apache.ibatis.session.SqlSessionFactory, org.apache.ibatis.session.ExecutorType, org.springframework.dao.support.PersistenceExceptionTranslator)
+                    -> org.apache.ibatis.session.defaults.DefaultSqlSession.insert(java.lang.String, java.lang.Object)
+                    -> org.apache.ibatis.session.defaults.DefaultSqlSession.update(java.lang.String, java.lang.Object)
