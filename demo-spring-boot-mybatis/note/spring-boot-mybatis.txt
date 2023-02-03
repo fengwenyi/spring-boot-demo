@@ -39,7 +39,11 @@ org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
                                     -> org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode
                                         -> org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(java.lang.String, org.apache.ibatis.mapping.SqlSource, org.apache.ibatis.mapping.StatementType, org.apache.ibatis.mapping.SqlCommandType, java.lang.Integer, java.lang.Integer, java.lang.String, java.lang.Class<?>, java.lang.String, java.lang.Class<?>, org.apache.ibatis.mapping.ResultSetType, boolean, boolean, boolean, org.apache.ibatis.executor.keygen.KeyGenerator, java.lang.String, java.lang.String, java.lang.String, org.apache.ibatis.scripting.LanguageDriver, java.lang.String)
                                             -> org.apache.ibatis.session.Configuration.addMappedStatement
-                        -> org.apache.ibatis.builder.xml.XMLMapperBuilder#bindMapperForNamespace
+                        -> org.apache.ibatis.builder.xml.XMLMapperBuilder#bindMapperForNamespace *
+                            -> org.apache.ibatis.session.Configuration.addMapper
+                                -> org.apache.ibatis.binding.MapperRegistry.addMapper
+                                    -> org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.MapperAnnotationBuilder
+                                    -> org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse
                         -> org.apache.ibatis.builder.xml.XMLMapperBuilder#parsePendingResultMaps
                         -> org.apache.ibatis.builder.xml.XMLMapperBuilder#parsePendingCacheRefs
                         -> org.apache.ibatis.builder.xml.XMLMapperBuilder#parsePendingStatements
@@ -72,6 +76,20 @@ org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration
                 -> org.mybatis.spring.mapper.MapperScannerConfigurer.postProcessBeanDefinitionRegistry
 
 -> org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.MybatisAutoConfiguration
+
+mapper 接口代理流程
+
+-> org.mybatis.spring.mapper.MapperFactoryBean.getObject
+    -> org.mybatis.spring.support.SqlSessionDaoSupport.getSqlSession
+    -> org.mybatis.spring.SqlSessionTemplate.getMapper
+        -> org.mybatis.spring.SqlSessionTemplate.getConfiguration
+            -> org.apache.ibatis.session.SqlSessionFactory.getConfiguration
+        -> org.apache.ibatis.session.Configuration.getMapper
+            -> org.apache.ibatis.binding.MapperRegistry.getMapper
+                -> org.apache.ibatis.binding.MapperProxyFactory.newInstance(org.apache.ibatis.session.SqlSession)
+                    -> org.apache.ibatis.binding.MapperProxy
+                    -> org.apache.ibatis.binding.MapperProxyFactory.newInstance(org.apache.ibatis.binding.MapperProxy<T>)
+
 
 
 查询流程：
