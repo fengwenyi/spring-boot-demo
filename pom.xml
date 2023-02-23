@@ -90,6 +90,7 @@
         <module>demo-spring-boot-mybatis-plus-p6spy</module>
         <module>demo-spring-boot-dynamic-tp</module>
         <module>demo-spring-boot-knife4j</module>
+        <module>demo-spring-boot-web-service</module>
     </modules>
 
     <parent>
