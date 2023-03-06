@@ -91,6 +91,7 @@
         <module>demo-spring-boot-dynamic-tp</module>
         <module>demo-spring-boot-knife4j</module>
         <module>demo-spring-boot-web-service</module>
+        <module>demo-spring-boot-bean</module>
     </modules>
 
     <parent>
