@@ -92,6 +92,7 @@
         <module>demo-spring-boot-knife4j</module>
         <module>demo-spring-boot-web-service</module>
         <module>demo-spring-boot-bean</module>
+        <module>demo-spring-boot-http</module>
     </modules>
 
     <parent>
