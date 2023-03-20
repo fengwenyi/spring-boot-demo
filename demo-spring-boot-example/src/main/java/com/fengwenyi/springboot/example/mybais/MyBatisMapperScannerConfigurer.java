@@ -51,7 +51,7 @@ public class MyBatisMapperScannerConfigurer implements BeanDefinitionRegistryPos
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-
+        log.info("===> MyBatisMapperScannerConfigurer > #postProcessBeanFactory");
     }
 
     @Override

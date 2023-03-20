@@ -29,10 +29,12 @@ public class MyBatisMapperScannerRegistrar implements ImportBeanDefinitionRegist
 
         builder.addPropertyValue("basePackages", new String[]{ "com.fengwenyi.springboot.example.mybais.mapper" });
 
-        registry.registerBeanDefinition(generateBaseBeanName(importingClassMetadata, 0), builder.getBeanDefinition());
+        String beanName = generateBaseBeanName(importingClassMetadata, 0);
 
-        Object userMapper = applicationContext.getBean("userMapper");
-        log.info("===> userMapper: " + userMapper);
+        registry.registerBeanDefinition(beanName, builder.getBeanDefinition());
+
+//        Object userMapper = applicationContext.getBean("userMapper");
+//        log.info("===> userMapper: " + userMapper);
 
 
     }
