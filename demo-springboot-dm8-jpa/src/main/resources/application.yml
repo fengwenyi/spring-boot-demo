@@ -1,0 +1,31 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+#      ddl-auto: none
+      ddl-auto: update
+    properties:
+      hibernate.show_sql: true
+      hibernate.format_sql: true
+      hibernate:
+        dialect: org.hibernate.dialect.DmDialect
+        connection:
+          autocommit: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.DmDialect
+  datasource:
+    # 数据源
+    url: jdbc:dm://localhost:5236/demo-springboot-dm
+    username: SYSDBA
+    password: SYSDBA001
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: dm.jdbc.driver.DmDriver
+    # 连接池
+    hikari:
+      maximum-pool-size: 8
+      minimum-idle: 4
+      idle-timeout: 30000
+      connection-timeout: 30000
+      max-lifetime: 45000
+      auto-commit: true
+      pool-name: DemoJpaHikariCP
