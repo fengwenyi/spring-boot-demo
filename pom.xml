@@ -93,6 +93,7 @@
         <module>demo-spring-boot-web-service</module>
         <module>demo-spring-boot-bean</module>
         <module>demo-spring-boot-http</module>
+        <module>demo-springboot-dm8-jpa</module>
     </modules>
 
     <parent>
