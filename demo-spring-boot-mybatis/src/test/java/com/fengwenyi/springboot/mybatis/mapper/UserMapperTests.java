@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author <a href="https://fengwenyi.com">Erwin Feng</a>
@@ -37,5 +38,13 @@ public class UserMapperTests extends MyBatisApplicationTests {
         pageModel.setPageSize(10);
         List<UserEntity> userEntityList = userMapper.pageByInterceptor(pageModel);
         System.out.println(JsonUtils.convertString(userEntityList));
+    }
+
+    @Test
+    public void testQueryMapByName() {
+        Map<Integer, UserEntity> map = userMapper.queryMapByName("张三");
+        for (Map.Entry<Integer, UserEntity> entry : map.entrySet()) {
+            System.out.printf("%d - %s\n", entry.getKey(), JsonUtils.convertString(entry.getValue()));
+        }
     }
 }
