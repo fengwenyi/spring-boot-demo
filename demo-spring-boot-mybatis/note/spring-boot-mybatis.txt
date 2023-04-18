@@ -136,3 +136,18 @@ mapper 接口代理流程
                     -> org.mybatis.spring.SqlSessionUtils.getSqlSession(org.apache.ibatis.session.SqlSessionFactory, org.apache.ibatis.session.ExecutorType, org.springframework.dao.support.PersistenceExceptionTranslator)
                     -> org.apache.ibatis.session.defaults.DefaultSqlSession.insert(java.lang.String, java.lang.Object)
                     -> org.apache.ibatis.session.defaults.DefaultSqlSession.update(java.lang.String, java.lang.Object)
+
+
+执行的类型
+
+org.apache.ibatis.binding.MapperMethod.execute
+
+
+MapKey 执行流程：
+
+com.fengwenyi.springboot.mybatis.mapper.UserMapper.queryMapByName
+    -> org.apache.ibatis.binding.MapperMethod.execute
+        -> org.apache.ibatis.binding.MapperMethod.executeForMap
+            -> org.mybatis.spring.SqlSessionTemplate.selectMap(java.lang.String, java.lang.Object, java.lang.String)
+                -> org.mybatis.spring.SqlSessionTemplate.SqlSessionInterceptor.invoke
+                    -> org.apache.ibatis.session.defaults.DefaultSqlSession.selectMap(java.lang.String, java.lang.Object, java.lang.String)
