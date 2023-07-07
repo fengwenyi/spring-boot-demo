@@ -86,3 +86,7 @@ public class UserEntity extends BaseBizEntity {
 }
 ```
 
+## 不能更新为null值
+
+@TableField(updateStrategy = FieldStrategy.IGNORED)
+

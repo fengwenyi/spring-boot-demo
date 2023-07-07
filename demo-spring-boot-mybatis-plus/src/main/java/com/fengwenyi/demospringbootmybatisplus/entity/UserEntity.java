@@ -1,5 +1,6 @@
 package com.fengwenyi.demospringbootmybatisplus.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldStrategy;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
@@ -23,5 +24,8 @@ public class UserEntity extends BaseBizEntity {
 
     @TableField(typeHandler = JacksonTypeHandler.class)
     private WalletBo wallet;
+
+    @TableField(updateStrategy = FieldStrategy.IGNORED)
+    private String syncTime;
 
 }
