@@ -94,6 +94,7 @@
         <module>demo-spring-boot-bean</module>
         <module>demo-spring-boot-http</module>
         <module>demo-springboot-dm8-jpa</module>
+        <module>demo-spring-boot-thread</module>
     </modules>
 
     <parent>
