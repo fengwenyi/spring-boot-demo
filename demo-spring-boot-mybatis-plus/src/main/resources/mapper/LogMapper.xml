@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fengwenyi.demospringbootmybatisplus.dao.ILogDao">
+
+    <select id="queryByName" resultType="com.fengwenyi.demospringbootmybatisplus.entity.LogEntity">
+        select
+            *
+        from
+            t_log t
+        where
+            <if test="logKey != null" >
+                t.log_key = ''
+            </if>
+            MATCH(t.data) AGAINST(#{data})
+    </select>
+
+</mapper>
