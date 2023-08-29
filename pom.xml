@@ -96,6 +96,7 @@
         <module>demo-springboot-dm8-jpa</module>
         <module>demo-spring-boot-thread</module>
         <module>demo-spring-boot-spel</module>
+        <module>demo-spring-boot-time</module>
     </modules>
 
     <parent>
