@@ -1,4 +1,4 @@
-package com.fengwenyi.demo.springboot.http;
+package com.fengwenyi.demo.springboot.http.controller;
 
 import com.fengwenyi.api.result.ResultTemplate;
 import com.fengwenyi.demo.springboot.http.vo.response.UserResponseVo;
