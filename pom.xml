@@ -97,6 +97,9 @@
         <module>demo-spring-boot-thread</module>
         <module>demo-spring-boot-spel</module>
         <module>demo-spring-boot-time</module>
+        <module>demo-spring-boot-starter</module>
+        <module>demo-spring-boot-starter-enabled</module>
+        <module>demo-spring-boot-starter-jpa</module>
     </modules>
 
     <parent>

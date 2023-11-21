@@ -98,3 +98,12 @@ example：demo-spring-boot-example
 - Spring Data 2021.2.1 和 2021.1.5 发布
 
 
+## 如何编写 spring-boot-starter
+
+demo-spring-boot-starter
+demo-spring-boot-starter-enabled
+demo-spring-boot-starter-jpa
+
+看这三个项目
+
+
