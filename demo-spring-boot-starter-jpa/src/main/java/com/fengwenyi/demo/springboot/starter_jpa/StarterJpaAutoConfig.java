@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  */
 @Configuration
 @ComponentScan(basePackageClasses = StarterJpaAutoConfig.class)
-@EnableJpaRepositories
-@EntityScan
+@EnableJpaRepositories("com.fengwenyi.demo.springboot.starter_jpa.repository")
+@EntityScan("com.fengwenyi.demo.springboot.starter_jpa.entity")
 public class StarterJpaAutoConfig {
 }
