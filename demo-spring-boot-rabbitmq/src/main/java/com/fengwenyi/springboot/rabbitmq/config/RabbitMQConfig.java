@@ -17,6 +17,7 @@ public class RabbitMQConfig {
 
     // item 交换机
     public static final String ITEM_TOPIC_EXCHANGE = "item_topic_exchange";
+    public static final String FANOUT_EXCHANGE_DEMO = "fanout_exchange_demo";
 
     // item 队列
     public static final String ITEM_QUEUE = "item_queue";
@@ -73,6 +74,45 @@ public class RabbitMQConfig {
     @Bean
     public Binding cfgDelayBinding() {
         return BindingBuilder.bind(delayQueue()).to(delayExchange()).with("delay_key").noargs();
+    }
+
+
+    // -------------------------------------------------------------------
+
+    @Bean
+    public FanoutExchange demoFanoutExchange() {
+        // return new FanoutExchange(FANOUT_EXCHANGE_DEMO,true, false);
+        return ExchangeBuilder
+                .fanoutExchange(FANOUT_EXCHANGE_DEMO)
+                .durable(false) // 不持久化数据
+                .autoDelete() // 解绑删除
+                .build();
+    }
+
+    @Bean
+    public Queue consumer01Queue() {
+        return QueueBuilder.durable("queue_consumer01").build();
+    }
+
+    @Bean
+    public Binding consumer01QueueDemoFanoutExchangeBinding() {
+        return BindingBuilder
+                .bind(consumer01Queue())
+                .to(demoFanoutExchange())
+                ;
+    }
+
+    @Bean
+    public Queue consumer02Queue() {
+        return QueueBuilder.durable("queue_consumer02").build();
+    }
+
+    @Bean
+    public Binding consumer02QueueDemoFanoutExchangeBinding() {
+        return BindingBuilder
+                .bind(consumer02Queue())
+                .to(demoFanoutExchange())
+                ;
     }
 
 }
