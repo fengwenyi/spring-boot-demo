@@ -100,6 +100,7 @@
         <module>demo-spring-boot-starter</module>
         <module>demo-spring-boot-starter-enabled</module>
         <module>demo-spring-boot-starter-jpa</module>
+        <module>demo-spring-boot-message</module>
     </modules>
 
     <parent>
