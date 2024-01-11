@@ -11,6 +11,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
@@ -31,20 +32,30 @@ public class ExampleAspect {
     @Autowired
     private ILogService iLogService;
 
+    @Order(100001)
     @Around("execution(* com.fengwenyi.demospringbootaop.controller.*.*(..))")
     public Object logExecutionTime1(ProceedingJoinPoint joinPoint) throws Throwable {
 
         long startTime = System.nanoTime();
 
-        Object result = joinPoint.proceed();
+        log.info("ExampleAspect#around execute start");
 
-        long endTime = System.nanoTime();
+        try {
 
-        double spendTime = (endTime - startTime) / 1000_1000d;
+            return joinPoint.proceed();
 
-        log.info("url：{}, 耗时：{}毫秒", "", spendTime);
+        } finally {
 
-        return result;
+
+            long endTime = System.nanoTime();
+
+            double spendTime = (endTime - startTime) / 1000_1000d;
+
+            log.info("ExampleAspect#around execute end");
+
+            log.info("url：{}, 耗时：{}毫秒", "", spendTime);
+
+        }
     }
 
 

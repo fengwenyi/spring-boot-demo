@@ -25,3 +25,14 @@ com.sample.service.impl	AOP所切的服务的包名，即，我们的业务部�
 包名后面的”..“	表示当前包及子包
 第二个”*“	表示类名，*即所有类。此处可以自定义，下文有举例
 .*(..)	表示任何方法名，括号表示参数，两个点表示任何参数类型
+
+
+> MyFirstAspect#around execute start
+MySecondAspect#around execute start
+ExampleAspect#around execute start
+ExampleAspect#around execute end
+url：, 耗时：0.7597495250474953毫秒
+MySecondAspect#around execute end
+MyFirstAspect#around execute end
+
+使用注解的优先级高于包扫描
