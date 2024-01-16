@@ -1,5 +1,6 @@
 package com.fengwenyi.demospringbootaop.controller;
 
+import com.fengwenyi.demospringbootaop.annotation.MyAop;
 import com.fengwenyi.demospringbootaop.annotation.MyFirstAop;
 import com.fengwenyi.demospringbootaop.annotation.MySecondAop;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,17 @@ public class SampleController {
     @RequestMapping("/aop-order")
     public String aopOrder() {
         return "aopOrder";
+    }
+
+    @MyAop
+    @RequestMapping("/my-api")
+    public String myApi() {
+        return "success";
+    }
+
+    @RequestMapping("/my-api2")
+    public String myApi2() {
+        return "success";
     }
 
 }

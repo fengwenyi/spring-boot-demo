@@ -46,7 +46,6 @@ public class ExampleAspect {
 
         } finally {
 
-
             long endTime = System.nanoTime();
 
             double spendTime = (endTime - startTime) / 1000_1000d;
