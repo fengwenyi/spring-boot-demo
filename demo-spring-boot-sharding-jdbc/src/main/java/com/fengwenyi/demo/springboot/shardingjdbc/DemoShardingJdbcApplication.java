@@ -1,4 +1,4 @@
-package com.fengwenyi.springboot.shardingjdbc;
+package com.fengwenyi.demo.springboot.shardingjdbc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

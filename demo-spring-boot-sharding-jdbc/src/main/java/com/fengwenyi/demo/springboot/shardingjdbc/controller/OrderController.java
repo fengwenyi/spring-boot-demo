@@ -1,8 +1,7 @@
-package com.fengwenyi.springboot.shardingjdbc.controller;
+package com.fengwenyi.demo.springboot.shardingjdbc.controller;
 
-import com.fengwenyi.javalib.generate.IdUtils;
-import com.fengwenyi.springboot.shardingjdbc.entity.OrderEntity;
-import com.fengwenyi.springboot.shardingjdbc.repository.OrderRepository;
+import com.fengwenyi.demo.springboot.shardingjdbc.entity.OrderEntity;
+import com.fengwenyi.demo.springboot.shardingjdbc.repository.OrderRepository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +26,7 @@ public class OrderController {
     @PostMapping("/create")
     public void create(@RequestBody OrderEntity requestVo) {
         OrderEntity entity = new OrderEntity();
-        entity.setId(System.currentTimeMillis());
+        entity.setId(requestVo.getId());
         entity.setUserId(requestVo.getUserId());
         entity.setGoodsId(1L);
         entity.setAmount(new BigDecimal(1));

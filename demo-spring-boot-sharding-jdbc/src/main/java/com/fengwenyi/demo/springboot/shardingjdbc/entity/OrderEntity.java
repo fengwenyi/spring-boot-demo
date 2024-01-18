@@ -1,4 +1,4 @@
-package com.fengwenyi.springboot.shardingjdbc.entity;
+package com.fengwenyi.demo.springboot.shardingjdbc.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;

@@ -1,6 +1,6 @@
-package com.fengwenyi.springboot.shardingjdbc.repository;
+package com.fengwenyi.demo.springboot.shardingjdbc.repository;
 
-import com.fengwenyi.springboot.shardingjdbc.entity.OrderEntity;
+import com.fengwenyi.demo.springboot.shardingjdbc.entity.OrderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,0 +1,43 @@
+单独使用（yaml格式）：
+
+dataSources:
+  demo-sharding-ds0: !!org.apache.commons.dbcp.BasicDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo-sharding-ds0
+    username: root
+    password: 123456
+  demo-sharding-ds1: !!org.apache.commons.dbcp.BasicDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo-sharding-ds1
+    username: root
+    password: 123456
+
+shardingRule:
+  tables:
+    t_order:
+      actualDataNodes: demo-sharding-ds${0..1}.t_order${0..1}
+      databaseStrategy:
+        inline:
+          shardingColumn: user_id
+          algorithmExpression: demo-sharding-ds${user_id % 2}
+      tableStrategy:
+        inline:
+          shardingColumn: order_id
+          algorithmExpression: t_order${order_id % 2}
+      keyGenerator:
+        type: SNOWFLAKE
+        column: order_id
+  bindingTables:
+    - t_order
+  broadcastTables:
+    - t_config
+
+  defaultDataSourceName: demo-sharding-ds0
+  defaultTableStrategy:
+    none:
+  defaultKeyGenerator:
+    type: SNOWFLAKE
+    column: order_id
+
+props:
+  sql.show: true

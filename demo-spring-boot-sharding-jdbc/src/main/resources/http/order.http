@@ -3,5 +3,6 @@ POST http://localhost:8080/order/create
 Content-Type: application/json
 
 {
-  "userId": 6
+  "id": 4,
+  "userId": 1
 }

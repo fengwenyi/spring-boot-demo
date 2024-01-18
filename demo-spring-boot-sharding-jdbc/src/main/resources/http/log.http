@@ -1,0 +1,7 @@
+### 日志-创建
+POST http://localhost:8080/log/create
+Content-Type: application/json
+
+{
+  "logTime": "2025-01-18 15:45:00"
+}

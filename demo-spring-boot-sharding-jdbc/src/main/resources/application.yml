@@ -9,75 +9,47 @@ spring:
       hibernate.format_sql: true
     open-in-view: false
 
-#  shardingsphere:
-#    datasource:
-#      names: demo-sharding-ds0,demo-sharding-ds1
-#      demo-sharding-ds0:
-#        type: org.apache.commons.dbcp2.BasicDataSource
-#        driver-class-name: com.mysql.jdbc.Driver
-#        url: jdbc:mysql://localhost:3306/demo-sharding-ds0
-#        username: root
-#        password: 123456
+  shardingsphere:
+    datasource:
+      names: demo-sharding-ds0, demo-sharding-ds1
+      demo-sharding-ds0:
+        type: org.apache.commons.dbcp2.BasicDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/demo-sharding-ds0
+        username: root
+        password: 123456
+      demo-sharding-ds1:
+        type: org.apache.commons.dbcp2.BasicDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/demo-sharding-ds1
+        username: root
+        password: 123456
+    sharding:
+      tables:
+        t_order:
+          actual-data-nodes: demo-sharding-ds$->{0..1}.t_order$->{0..1}
+          table-strategy:
+            inline:
+              sharding-column: id
+              algorithm-expression: t_order$->{id % 2}
+#          key-generator:
+#            column: id
+#            type: SNOWFLAKE
 
-#spring.shardingsphere.datasource.names: demo-sharding-ds0,demo-sharding-ds1
-#
-#spring.shardingsphere.datasource.demo-sharding-ds0.type: org.apache.commons.dbcp2.BasicDataSource
-#spring.shardingsphere.datasource.demo-sharding-ds0.driver-class-name: com.mysql.jdbc.Driver
-#spring.shardingsphere.datasource.demo-sharding-ds0.url: jdbc:mysql://localhost:3306/demo-sharding-ds0
-#spring.shardingsphere.datasource.demo-sharding-ds0.username: root
-#spring.shardingsphere.datasource.demo-sharding-ds0.password: 123456
-#
-#spring.shardingsphere.datasource.demo-sharding-ds1.type: org.apache.commons.dbcp2.BasicDataSource
-#spring.shardingsphere.datasource.demo-sharding-ds1.driver-class-name: com.mysql.jdbc.Driver
-#spring.shardingsphere.datasource.demo-sharding-ds1.url: jdbc:mysql://localhost:3306/demo-sharding-ds1
-#spring.shardingsphere.datasource.demo-sharding-ds1.username: root
-#spring.shardingsphere.datasource.demo-sharding-ds1.password: 123456
-#
-#spring.shardingsphere.sharding.default-database-strategy.inline.sharding-column: user_id
-#spring.shardingsphere.sharding.default-database-strategy.inline.algorithm-expression: demo-sharding-ds$->{user_id % 2}
-#
-#spring.shardingsphere.sharding.tables.t_order.actual-data-nodes: demo-sharding-ds$->{0..1}.t_order
-##spring.shardingsphere.sharding.tables.t_order.table-strategy.inline.sharding-column:
-##spring.shardingsphere.sharding.tables.t_order.table-strategy.inline.algorithm-expression: t_order
+        t_log:
+          actual-data-nodes: demo-sharding-ds0.t_log_$->{2024..2025}
+          table-strategy:
+#            inline:
+#              sharding-column: log_time
+#              algorithm-expression: t_log_$->{}
+            standard:
+              sharding-column: log_time
+              precise-algorithm-class-name: com.fengwenyi.demo.springboot.shardingjdbc.algorithm.LogTablePreciseShardingAlgorithm
 
-dataSources:
-  demo-sharding-ds0: !!org.apache.commons.dbcp.BasicDataSource
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/demo-sharding-ds0
-    username: root
-    password: 123456
-  demo-sharding-ds1: !!org.apache.commons.dbcp.BasicDataSource
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/demo-sharding-ds1
-    username: root
-    password: 123456
+      binding-tables: t_order, t_log
+#      broadcast-tables: t_config
 
-shardingRule:
-  tables:
-    t_order:
-      actualDataNodes: demo-sharding-ds${0..1}.t_order${0..1}
-      databaseStrategy:
+      default-database-strategy:
         inline:
-          shardingColumn: user_id
-          algorithmExpression: demo-sharding-ds${user_id % 2}
-      tableStrategy:
-        inline:
-          shardingColumn: order_id
-          algorithmExpression: t_order${order_id % 2}
-      keyGenerator:
-        type: SNOWFLAKE
-        column: order_id
-  bindingTables:
-    - t_order
-  broadcastTables:
-    - t_config
-
-  defaultDataSourceName: demo-sharding-ds0
-  defaultTableStrategy:
-    none:
-  defaultKeyGenerator:
-    type: SNOWFLAKE
-    column: order_id
-
-props:
-  sql.show: true
+          sharding-column: user_id
+          algorithm-expression: demo-sharding-ds$->{user_id % 2}

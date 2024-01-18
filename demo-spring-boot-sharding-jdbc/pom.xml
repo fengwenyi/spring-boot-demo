@@ -11,6 +11,10 @@
 
     <artifactId>demo-spring-boot-sharding-jdbc</artifactId>
 
+    <properties>
+        <sharding-sphere.version>4.1.1</sharding-sphere.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -27,10 +31,24 @@
             <artifactId>sharding-jdbc-core</artifactId>
             <version>4.1.1</version>
         </dependency>-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
             <version>4.1.1</version>
+        </dependency>-->
+
+        <!-- for spring boot -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>${sharding-sphere.version}</version>
+        </dependency>
+
+        <!-- for spring namespace -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-namespace</artifactId>
+            <version>${sharding-sphere.version}</version>
         </dependency>
 
         <dependency>
@@ -43,6 +61,12 @@
             <artifactId>commons-dbcp2</artifactId>
             <version>2.9.0</version>
         </dependency>
+
+        <!--<dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>-->
 
         <dependency>
             <groupId>mysql</groupId>
