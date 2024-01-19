@@ -1,6 +1,6 @@
-package com.fengwenyi.demospringbootaop.aspect;
+package com.fengwenyi.demo.springboot.aop.aspect;
 
-import com.fengwenyi.demospringbootaop.annotation.MyFirstAop;
+import com.fengwenyi.demo.springboot.aop.annotation.MySecondAop;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -15,18 +15,18 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Aspect
 @Component
-@Order(100002)
-public class MyFirstAspect {
+@Order(100003)
+public class MySecondAspect {
 
     @Around("@annotation(aop)")
-    public Object around(ProceedingJoinPoint joinPoint, MyFirstAop aop) throws Throwable {
+    public Object around(ProceedingJoinPoint joinPoint, MySecondAop aop) throws Throwable {
 
-        log.info("MyFirstAspect#around execute start");
+        log.info("MySecondAspect#around execute start");
 
         try {
             return joinPoint.proceed();
         } finally {
-            log.info("MyFirstAspect#around execute end");
+            log.info("MySecondAspect#around execute end");
         }
 
     }

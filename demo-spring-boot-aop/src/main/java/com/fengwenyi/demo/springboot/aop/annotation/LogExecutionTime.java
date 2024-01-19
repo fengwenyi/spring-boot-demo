@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootaop.annotation;
+package com.fengwenyi.demo.springboot.aop.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,10 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @author <a href="https://fengwenyi.com">Erwin Feng</a>
- * @since 2024-01-11
+ * @author Erwin Feng
+ * @since 2020/9/12
  */
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MySecondAop {
+public @interface LogExecutionTime {
+
 }

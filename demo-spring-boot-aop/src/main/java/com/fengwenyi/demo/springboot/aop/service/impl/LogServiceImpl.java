@@ -1,6 +1,6 @@
-package com.fengwenyi.demospringbootaop.service.impl;
+package com.fengwenyi.demo.springboot.aop.service.impl;
 
-import com.fengwenyi.demospringbootaop.service.ILogService;
+import com.fengwenyi.demo.springboot.aop.service.ILogService;
 import org.springframework.stereotype.Service;
 
 /**

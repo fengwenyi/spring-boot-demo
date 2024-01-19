@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootaop.controller;
+package com.fengwenyi.demo.springboot.aop.controller;
 
 /**
  * @author Erwin Feng

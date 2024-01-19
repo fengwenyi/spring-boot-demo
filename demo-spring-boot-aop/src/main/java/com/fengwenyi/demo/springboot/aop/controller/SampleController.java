@@ -1,10 +1,10 @@
-package com.fengwenyi.demospringbootaop.controller;
+package com.fengwenyi.demo.springboot.aop.controller;
 
-import com.fengwenyi.demospringbootaop.annotation.MyAop;
-import com.fengwenyi.demospringbootaop.annotation.MyFirstAop;
-import com.fengwenyi.demospringbootaop.annotation.MySecondAop;
+import com.fengwenyi.demo.springboot.aop.annotation.MyAop;
+import com.fengwenyi.demo.springboot.aop.annotation.MyFirstAop;
+import com.fengwenyi.demo.springboot.aop.annotation.MySecondAop;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -13,12 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sample")
+@Slf4j
 public class SampleController {
 
     @MySecondAop
     @MyFirstAop
     @RequestMapping("/aop-order")
     public String aopOrder() {
+        log.info("SampleController#aopOrder");
         return "aopOrder";
     }
 

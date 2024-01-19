@@ -1,7 +1,6 @@
-package com.fengwenyi.demospringbootaop.controller;
+package com.fengwenyi.demo.springboot.aop.controller;
 
-import com.fengwenyi.demospringbootaop.annotation.LogExecutionTime;
-import com.fengwenyi.demospringbootaop.annotation.QueryData;
+import com.fengwenyi.demo.springboot.aop.annotation.QueryData;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

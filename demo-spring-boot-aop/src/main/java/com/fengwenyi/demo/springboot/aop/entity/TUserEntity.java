@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootaop.entity;
+package com.fengwenyi.demo.springboot.aop.entity;
 
 /**
  * @author Erwin Feng

@@ -1,7 +1,7 @@
-package com.fengwenyi.demospringbootaop.service;
+package com.fengwenyi.demo.springboot.aop.service;
 
 
-import com.fengwenyi.demospringbootaop.entity.TUserEntity;
+import com.fengwenyi.demo.springboot.aop.entity.TUserEntity;
 
 /**
  * @author Erwin Feng

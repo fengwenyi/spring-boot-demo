@@ -1,10 +1,10 @@
-package com.fengwenyi.demospringbootaop.aspect;
+package com.fengwenyi.demo.springboot.aop.aspect;
 
-import com.fengwenyi.demospringbootaop.annotation.QueryData;
-import com.fengwenyi.demospringbootaop.parser.SpelParser;
-import com.fengwenyi.demospringbootaop.service.ICacheService;
-import com.fengwenyi.demospringbootaop.service.ILogService;
-import com.fengwenyi.demospringbootaop.service.impl.UserServiceImpl;
+import com.fengwenyi.demo.springboot.aop.annotation.QueryData;
+import com.fengwenyi.demo.springboot.aop.parser.SpelParser;
+import com.fengwenyi.demo.springboot.aop.service.ICacheService;
+import com.fengwenyi.demo.springboot.aop.service.ILogService;
+import com.fengwenyi.demo.springboot.aop.service.impl.UserServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -33,7 +33,7 @@ public class ExampleAspect {
     private ILogService iLogService;
 
     @Order(100001)
-    @Around("execution(* com.fengwenyi.demospringbootaop.controller.*.*(..))")
+    @Around("execution(* com.fengwenyi.demo.springboot.aop.controller.*.*(..))")
     public Object logExecutionTime1(ProceedingJoinPoint joinPoint) throws Throwable {
 
         long startTime = System.nanoTime();

@@ -1,8 +1,8 @@
-package com.fengwenyi.demospringbootaop.service.impl;
+package com.fengwenyi.demo.springboot.aop.service.impl;
 
-import com.fengwenyi.demospringbootaop.annotation.QueryData;
-import com.fengwenyi.demospringbootaop.entity.TUserEntity;
-import com.fengwenyi.demospringbootaop.service.IUserService;
+import com.fengwenyi.demo.springboot.aop.annotation.QueryData;
+import com.fengwenyi.demo.springboot.aop.entity.TUserEntity;
+import com.fengwenyi.demo.springboot.aop.service.IUserService;
 import org.springframework.stereotype.Service;
 
 /**

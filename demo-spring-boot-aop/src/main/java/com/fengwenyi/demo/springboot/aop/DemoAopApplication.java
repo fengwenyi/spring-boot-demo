@@ -1,4 +1,4 @@
-package com.fengwenyi.demospringbootaop;
+package com.fengwenyi.demo.springboot.aop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2021-08-27
  */
 @SpringBootApplication
-public class DemoSpringBootAopApplication {
+public class DemoAopApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoSpringBootAopApplication.class, args);
+        SpringApplication.run(DemoAopApplication.class, args);
     }
 
 }

@@ -1,6 +1,6 @@
-package com.fengwenyi.demospringbootaop.aspect;
+package com.fengwenyi.demo.springboot.aop.aspect;
 
-import com.fengwenyi.demospringbootaop.annotation.MyAop;
+import com.fengwenyi.demo.springboot.aop.annotation.MyAop;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -12,10 +12,10 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
-public class My2Aspect {
+public class MyAspect {
 
-    @Around("execution(* com.fengwenyi.demospringbootaop.controller.SampleController.myApi2(..))")
-    public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
+    @Around("@annotation(aop)")
+    public Object around(ProceedingJoinPoint joinPoint, MyAop aop) throws Throwable {
         return joinPoint.proceed();
     }
 
