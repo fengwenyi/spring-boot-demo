@@ -1,6 +1,2 @@
 rootProject.name = 'spring-boot-demo'
-include 'demo-spring-boot-hello'
-include 'demo-spring-boot-example'
 include 'demo-spring-boot-mybatis'
-include 'demo-spring-boot-mybatis-plus'
-

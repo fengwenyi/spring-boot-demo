@@ -1,9 +1,13 @@
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.0'
-    runtimeOnly 'mysql:mysql-connector-java'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+//    runtimeOnly 'mysql:mysql-connector-java'
+    runtimeOnly 'com.mysql:mysql-connector-j'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
     implementation 'com.fengwenyi:api-result:2.7.4'
+    implementation 'com.fengwenyi:JavaLib:2.2.6'
+    implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:2.1.0'
 }

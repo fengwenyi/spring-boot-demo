@@ -1,19 +1,13 @@
 // 编译脚本
 buildscript {
 	ext {
-		springBootVersion = "3.0.0"
+		springBootVersion = "3.2.1"
 	}
 
 	// 仓库配置
 	repositories {
 		mavenLocal()
-		jcenter()
-//		maven { url 'https://maven.aliyun.com/repository/public' }
-//		maven { url 'https://maven.aliyun.com/repository/central' }
-//		maven { url 'https://maven.aliyun.com/repository/spring' }
-//		maven { url 'https://maven.aliyun.com/repository/google' }
-//		maven { url 'https://repo.spring.io/release' }
-//		maven { url 'https://repo.spring.io/milestone' }
+		mavenCentral()
 	}
 
 	dependencies {
@@ -49,12 +43,6 @@ subprojects {
 
 	repositories {
 		mavenLocal()
-		jcenter()
-//		maven { url 'https://maven.aliyun.com/repository/public' }
-//		maven { url 'https://maven.aliyun.com/repository/central' }
-//		maven { url 'https://maven.aliyun.com/repository/spring' }
-//		maven { url 'https://maven.aliyun.com/repository/google' }
-//		maven { url 'https://repo.spring.io/release' }
-//		maven { url 'https://repo.spring.io/milestone' }
+		mavenCentral()
 	}
 }
