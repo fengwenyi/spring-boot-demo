@@ -2,6 +2,7 @@
 buildscript {
 	ext {
 		springBootVersion = "3.2.4"
+		springdocMvcUiVersion = '2.4.0'
 	}
 
 	// 仓库配置
