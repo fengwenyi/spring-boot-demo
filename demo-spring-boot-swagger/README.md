@@ -9,3 +9,7 @@ http://localhost:8080/swagger-ui/index.html#/
 - https://springdoc.org/
 - https://springdoc.org/#spring-webmvc-support
 - https://www.bezkoder.com/spring-boot-swagger-3/
+
+### blog
+
+- https://zhuanlan.zhihu.com/p/258630101
